@@ -1,0 +1,12 @@
+$blue: #0025EF;
+$yellow: #F7E921;
+$pink: #FF66C4;
+$red: #FF001C;
+
+@mixin container() {
+    max-width: 768px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 30px;
+    min-height: 100vh;
+}
