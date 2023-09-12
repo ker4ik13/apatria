@@ -1,0 +1,28 @@
+@import '@/shared/styles/_vars';
+
+.title {
+    border-radius: 8px;
+    position: relative;
+    z-index: 1;
+    background-color: $blue;
+    width: 100%;
+    text-align: center;
+    padding: 50px 0;
+}
+.text {
+    font-size: $title-size;
+    color: $blue;
+    text-transform: uppercase;
+    position: relative;
+    z-index: 2;
+}
+.bg {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    z-index: 0;
+    background-color: #fff;
+    border-radius: 8px;
+    width: 100%;
+    height: 100%;
+}

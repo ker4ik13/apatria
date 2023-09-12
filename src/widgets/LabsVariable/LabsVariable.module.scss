@@ -1,0 +1,44 @@
+@import '@/shared/styles/_vars';
+
+.labsVariable {
+    @include container();
+    padding-top: 50px;
+    background-color: $pink;
+}
+
+.header {
+    background-color: $yellow;
+    border-radius: 8px;
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+.img {
+    position: relative;
+    z-index: 2;
+    bottom: 8px;
+    left: 8px;
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: $blue;
+}
+
+.content {
+    margin-top: 30px;
+    font-size: $text-size;
+    color: $blue;
+    text-transform: uppercase;
+    padding: 0 10px;
+}
+
+.title {
+    cursor: text;
+    text-align: center;
+}
+
+.text {
+    margin-top: 16px;
+    cursor: text;
+}

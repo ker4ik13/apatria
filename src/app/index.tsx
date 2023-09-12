@@ -1,8 +1,8 @@
-import MainPage from "@/pages/MainPage";
 import "./styles";
+import RouterProvider from "./Router";
 
 const App = () => {
-  return <MainPage />;
+  return <RouterProvider />;
 };
 
 export default App;

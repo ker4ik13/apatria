@@ -2,6 +2,15 @@ $blue: #0025EF;
 $yellow: #F7E921;
 $pink: #FF66C4;
 $red: #FF001C;
+$beige: #F1EA42;
+$green: #0F9D58;
+$light-blue: #4285F4;
+$light-red: #DB4437;
+
+
+$title-size: 70px;
+$button-size: 28px;
+$text-size: 40px;
 
 @mixin container() {
     max-width: 768px;

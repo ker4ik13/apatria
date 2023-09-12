@@ -1,0 +1,35 @@
+@import '@/shared/styles/_vars';
+
+.docsPage {
+    background-color: $yellow;
+    @include container();
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-self: center;
+    position: relative;
+    width: 100%;
+}
+
+.title {
+    font-size: $title-size;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.content {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.img {
+    width: 100%;
+}

@@ -4,10 +4,11 @@
     background-color: $yellow;
     display: flex;
     flex-direction: column;
-    gap: 150px;
-    justify-content: center;
+    gap: 100px;
+    justify-content: flex-start;
     align-items: center;
     @include container;
+    padding-top: 50px;
 }
 
 .title {
@@ -19,13 +20,14 @@
 .variables {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 50px;
+    gap: 5vw;
 }
 
 .variable {
-    
+    width: 100%;
+    max-width: 100%;
 }
 
 .img {
-    
+    width: 100%;  
 }

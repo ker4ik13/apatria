@@ -1,0 +1,70 @@
+@import '@/shared/styles/_vars';
+
+.dnaPage {
+    @include container();
+    background-color: $red;
+    padding-top: 50px;
+}
+
+.header {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.close {
+
+}
+
+.content {
+    background-color: $yellow;
+    width: 100%;
+    border-radius: 8px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.results {
+    text-align: center;
+}
+
+.title {
+    font-size: $text-size;
+    color: $blue;
+    margin-bottom: 20px;
+}
+
+.text1 {
+    font-size: $button-size;
+    color: $light-red;
+}
+.text2 {
+    font-size: $button-size;
+    color: $light-blue;
+}
+.text3 {
+    font-size: $button-size;
+    color: $green;
+}
+
+.button {
+    background: none;
+    border: none;
+    outline: none;
+    color: #000;
+    font-size: $button-size;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.screenshot {
+    color: #fff;
+    text-align: center;
+    max-width: 200px;
+    margin: 20px auto 0;
+}
