@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import styles from "./DnaPage.module.scss";
 import { Chart } from "chart.js/auto";
-import { useRef, useState } from "react";
+import { useRef } from "react";
 import { generateArrays } from "@/features/generateRandomPercentage";
 
 const mockNation: string[] = [
@@ -72,7 +72,9 @@ const DnaPage = () => {
           className={styles.button}
           type='button'
           onClick={() => {
-            draw(diagram.current);
+            if (diagram.current) {
+              draw(diagram.current);
+            }
           }}
         >
           Показать результат

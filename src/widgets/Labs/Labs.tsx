@@ -6,7 +6,7 @@ import labs3img from "@/images/labs/3.jpeg";
 import labs4img from "@/images/labs/4.jpeg";
 import labs5img from "@/images/labs/5.jpeg";
 import labs6img from "@/images/labs/6.jpeg";
-import labs7img from "@/images/labs/7.jpeg";
+// import labs7img from "@/images/labs/7.jpeg";
 
 const Labs = () => {
   return (
