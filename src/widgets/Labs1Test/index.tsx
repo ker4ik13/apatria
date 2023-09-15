@@ -3,33 +3,54 @@ import styles from "./Labs1Test.module.scss";
 import { fingerStates } from "./FingerStates";
 import useLongPress from "@/features/useLongPress";
 import { Link } from "react-router-dom";
+import fingerGif from "@/images/finger.gif";
+import eyeGif from "@/images/eye-scanner.gif";
+import { startProgress } from "./startProgress";
 
 const FingerTest = () => {
   const [fingerTest, setFingerTest] = useState(fingerStates.notStarted);
   const [eyeTest, setEyeTest] = useState(fingerStates.notStarted);
-  const div = useRef<HTMLDivElement>(null);
+  const div1 = useRef<HTMLDivElement>(null);
+  const div2 = useRef<HTMLDivElement>(null);
 
   const longPress = useLongPress(() => {
     setFingerTest(fingerStates.completed);
-    if (div.current) {
-      div.current.style.backgroundColor = "#fff";
-      div.current.innerText = "Completed";
-    }
-  }, 2000);
+  }, 3000);
 
   const random = Math.floor(Math.random() * (30 - 1) + 1);
-  console.log(random);
 
   return (
     <>
       <div className={styles.fingerPage}>
-        <h2 className={styles.title}>Приложите и держите 3s</h2>
+        <h2 className={styles.title}>Приложите и держите</h2>
         <div className={styles.fingerZone}>
-          <div className={styles.finger} {...longPress}></div>
-          <div className={styles.progress} ref={div}></div>
-          {/* <button type='button' className={styles.button}>
-            Start
-          </button> */}
+          <div className={styles.finger} {...longPress}>
+            <img
+              src={fingerGif}
+              alt='Finger'
+              className={styles.fingerGif}
+              draggable={false}
+              onTouchStart={() => {
+                if (fingerTest === fingerStates.completed) {
+                  return;
+                } else {
+                  startProgress(div1.current);
+                }
+              }}
+              onTouchEnd={() => {
+                if (fingerTest === fingerStates.completed) {
+                  return;
+                } else {
+                  if (div1.current) {
+                    div1.current.style.width = "0";
+                  }
+                }
+              }}
+            />
+          </div>
+          <div className={styles.progress}>
+            <div className={styles.prog} ref={div1}></div>
+          </div>
         </div>
         {fingerTest === fingerStates.completed && (
           <div className={styles.footer}>
@@ -47,6 +68,7 @@ const FingerTest = () => {
               type='button'
               className={styles.button}
               onClick={() => {
+                startProgress(div2.current);
                 setTimeout(() => {
                   setEyeTest(fingerStates.completed);
                 }, 3000);
@@ -54,7 +76,17 @@ const FingerTest = () => {
             >
               Start
             </button>
-            <div className={styles.eye}></div>
+            <div className={styles.eye}>
+              <img
+                src={eyeGif}
+                alt='Eye'
+                className={styles.eyeGif}
+                draggable={false}
+              />
+            </div>
+            <div className={styles.progress}>
+              <div className={styles.prog} ref={div2}></div>
+            </div>
           </div>
           {eyeTest === fingerStates.completed && (
             <Link to={`/dna/${random}`} className={styles.resButton}>

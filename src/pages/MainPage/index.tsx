@@ -8,10 +8,14 @@ import labs4 from "@/images/labs/4.jpeg";
 import labs5 from "@/images/labs/5.jpeg";
 import labs6 from "@/images/labs/6.jpeg";
 import FingerTest from "@/widgets/Labs1Test";
+import FirstPage from "@/widgets/FirstPage";
+import Slider from "@/widgets/SliderPage";
 
 const MainPage = () => {
   return (
     <>
+      <FirstPage />
+      <Slider />
       <Droites />
       <Labs />
       <LabsVariable id={1} img={labs1} title='title' text='text' />

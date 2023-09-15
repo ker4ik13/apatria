@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import styles from "./DnaPage.module.scss";
 import { Chart } from "chart.js/auto";
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 import { generateArrays } from "@/features/generateRandomPercentage";
 
 const mockNation: string[] = [
@@ -35,19 +35,19 @@ const DnaPage = () => {
     ],
   };
 
-  const draw = (diagram: HTMLCanvasElement) => {
-    new Chart(diagram, {
-      data: data,
-      type: "pie",
-    });
-  };
+  useEffect(() => {
+    if (diagram.current) {
+      new Chart(diagram.current, {
+        data: data,
+        type: "pie",
+      });
+    }
+  }, [diagram.current]);
 
   return (
     <div className={styles.dnaPage}>
       <div className={styles.header}>
-        <Link to={"/"} className={styles.close}>
-          close
-        </Link>
+        <Link to={"/"} className={styles.close}></Link>
       </div>
       <div className={styles.content}>
         <canvas
@@ -68,17 +68,6 @@ const DnaPage = () => {
             {percentagesArray[2]}% {valuesArray[2]}
           </p>
         </div>
-        <button
-          className={styles.button}
-          type='button'
-          onClick={() => {
-            if (diagram.current) {
-              draw(diagram.current);
-            }
-          }}
-        >
-          Показать результат
-        </button>
       </div>
       <p className={styles.screenshot}>
         сделайте скриншот! Предъявляйте по требованию!

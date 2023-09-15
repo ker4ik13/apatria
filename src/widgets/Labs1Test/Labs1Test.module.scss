@@ -8,6 +8,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
+    padding-bottom: 30px;
 }
 
 .title {
@@ -26,9 +27,15 @@
 }
 
 .finger {
-    width: 70%;
-    height: 400px;
     background-color: green;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.fingerGif {
+    max-height: 400px;
 }
 
 .progress {
@@ -42,6 +49,17 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
+}
+
+.prog {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    height: 100%;
+    background-color: green;
+    transition: width .2s ease-in-out;
 }
 
 .footer {
@@ -54,15 +72,18 @@
 .next {
     color: #000;
     font-size: $title-size;
-    margin-top: 100px;
+    margin-top: 50px;
     text-decoration: none;
 }
 
 .eye {
     background-color: #111;
-    width: 70%;
-    height: 400px;
     margin-top: 30px;
+}
+
+.eyeGif {
+    width: 70vw;
+    max-width: 600px;
 }
 
 .button {
@@ -79,11 +100,14 @@
 .resButton {
     text-decoration: none;
     text-transform: uppercase;
-    color: #000;
+    color: #fff;
     background: none;
     outline: none;
     border: none;
     font-size: $title-size;
     margin-top: 30px;
     cursor: pointer;
+    background-color: $blue;
+    border-radius: 8px;
+    padding: 0 30px;
 }

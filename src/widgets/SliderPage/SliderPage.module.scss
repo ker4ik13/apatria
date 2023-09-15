@@ -1,0 +1,21 @@
+@import '@/shared/styles/_vars';
+
+.sliderPage {
+    @include container();
+    background-color: $yellow;
+    padding: 0 0 50px;
+}
+.bg {
+    width: 100%;
+}
+.content {
+    margin-top: 20px;
+}
+.title {
+    font-size: $title-size;
+    text-align: center;
+}
+.description {
+    font-size: $text-size;
+    text-align: center;
+}
