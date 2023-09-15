@@ -1,11 +1,11 @@
 import styles from "./SliderPage.module.scss";
-import sliderBg from "@/images/slider/sliderBg.png";
-import slider1Img from "@/images/slider/slider1.png";
-import slider2Img from "@/images/slider/slider2.png";
-import slider3Img from "@/images/slider/slider3.png";
-import slider4Img from "@/images/slider/slider4.png";
-import slider5Img from "@/images/slider/slider5.png";
-import slider6Img from "@/images/slider/slider6.png";
+import sliderBg from "@/images/slider/sliderBg.jpg";
+import slider1Img from "@/images/slider/slider1.jpg";
+import slider2Img from "@/images/slider/slider2.jpg";
+import slider3Img from "@/images/slider/slider3.jpg";
+import slider4Img from "@/images/slider/slider4.jpg";
+import slider5Img from "@/images/slider/slider5.jpg";
+import slider6Img from "@/images/slider/slider6.jpg";
 
 const allSliderImg: string[] = [
   slider1Img,

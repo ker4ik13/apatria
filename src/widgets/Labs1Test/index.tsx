@@ -25,19 +25,17 @@ const FingerTest = () => {
         <h2 className={styles.title}>Приложите и держите</h2>
         <div className={styles.fingerZone}>
           <div className={styles.finger} {...longPress}>
-            <img
-              src={fingerGif}
-              alt='Finger'
-              className={styles.fingerGif}
-              draggable={false}
-              onTouchStart={() => {
+            <div
+              onTouchStart={(event) => {
+                event.stopPropagation();
                 if (fingerTest === fingerStates.completed) {
                   return;
                 } else {
                   startProgress(div1.current);
                 }
               }}
-              onTouchEnd={() => {
+              onTouchEnd={(event) => {
+                event.stopPropagation();
                 if (fingerTest === fingerStates.completed) {
                   return;
                 } else {
@@ -46,6 +44,16 @@ const FingerTest = () => {
                   }
                 }
               }}
+              onClick={(event) => {
+                event.stopPropagation();
+                event.preventDefault();
+              }}
+            ></div>
+            <img
+              src={fingerGif}
+              alt='Finger'
+              className={styles.fingerGif}
+              draggable={false}
             />
           </div>
           <div className={styles.progress}>
@@ -77,6 +85,17 @@ const FingerTest = () => {
               Start
             </button>
             <div className={styles.eye}>
+              <div
+                onTouchStart={(event) => {
+                  event.stopPropagation();
+                }}
+                onTouchEnd={(event) => {
+                  event.stopPropagation();
+                }}
+                onClick={(event) => {
+                  event.stopPropagation();
+                }}
+              ></div>
               <img
                 src={eyeGif}
                 alt='Eye'
