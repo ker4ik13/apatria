@@ -74,10 +74,12 @@
 .img {
     width: 100%;
     -webkit-user-select: none;
-       -moz-user-select: none;
-        -ms-user-select: none;
-            user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
     pointer-events: none;
+    -o-object-fit: cover;
+    object-fit: cover;
 }
 .text {
     display: none;

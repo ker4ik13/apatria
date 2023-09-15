@@ -26,6 +26,7 @@ const FingerTest = () => {
         <div className={styles.fingerZone}>
           <div className={styles.finger} {...longPress}>
             <div
+              className={styles.prevent}
               onTouchStart={(event) => {
                 event.stopPropagation();
                 if (fingerTest === fingerStates.completed) {
@@ -48,13 +49,14 @@ const FingerTest = () => {
                 event.stopPropagation();
                 event.preventDefault();
               }}
-            ></div>
-            <img
-              src={fingerGif}
-              alt='Finger'
-              className={styles.fingerGif}
-              draggable={false}
-            />
+            >
+              <img
+                src={fingerGif}
+                alt='Finger'
+                className={styles.fingerGif}
+                draggable={false}
+              />
+            </div>
           </div>
           <div className={styles.progress}>
             <div className={styles.prog} ref={div1}></div>
