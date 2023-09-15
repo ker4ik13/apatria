@@ -26,16 +26,14 @@ const FingerTest = () => {
         <div className={styles.fingerZone}>
           <div className={styles.finger} {...longPress}>
             <div
-              onTouchStart={(event) => {
-                event.stopPropagation();
+              onTouchStart={() => {
                 if (fingerTest === fingerStates.completed) {
                   return;
                 } else {
                   startProgress(div1.current);
                 }
               }}
-              onTouchEnd={(event) => {
-                event.stopPropagation();
+              onTouchEnd={() => {
                 if (fingerTest === fingerStates.completed) {
                   return;
                 } else {
@@ -43,10 +41,6 @@ const FingerTest = () => {
                     div1.current.style.width = "0";
                   }
                 }
-              }}
-              onClick={(event) => {
-                event.stopPropagation();
-                event.preventDefault();
               }}
             >
               <div className={styles.prevent}>
@@ -88,24 +82,14 @@ const FingerTest = () => {
               Start
             </button>
             <div className={styles.eye}>
-              <div
-                className={styles.prevent}
-                onTouchStart={(event) => {
-                  event.stopPropagation();
-                }}
-                onTouchEnd={(event) => {
-                  event.stopPropagation();
-                }}
-                onClick={(event) => {
-                  event.stopPropagation();
-                }}
-              ></div>
-              <img
-                src={eyeGif}
-                alt='Eye'
-                className={styles.eyeGif}
-                draggable={false}
-              />
+              <div className={styles.prevent}>
+                <img
+                  src={eyeGif}
+                  alt='Eye'
+                  className={styles.eyeGif}
+                  draggable={false}
+                />
+              </div>
             </div>
             <div className={styles.progress}>
               <div className={styles.prog} ref={div2}></div>
