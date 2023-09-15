@@ -37,9 +37,10 @@
 .fingerGif {
     max-height: 400px;
     -webkit-user-select: none;
-       -moz-user-select: none;
-        -ms-user-select: none;
-            user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    pointer-events: none;
 }
 
 .progress {
@@ -89,9 +90,10 @@
     width: 70vw;
     max-width: 600px;
     -webkit-user-select: none;
-       -moz-user-select: none;
-        -ms-user-select: none;
-            user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    pointer-events: none;
 }
 
 .button {

@@ -37,7 +37,7 @@ const Slider = () => {
                   event.currentTarget.classList.toggle(styles.active);
                 }}
               >
-                <img src={item} className={styles.img} />
+                <img src={item} className={styles.img} draggable={false} />
                 <p className={styles.text}>
                   Lorem ipsum, dolor sit amet consectetur adipisicing elit.
                   Rerum veritatis, non, eveniet laudantium nesciunt dolore
