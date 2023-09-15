@@ -10,6 +10,7 @@
 }
 .content {
     margin-top: 20px;
+    position: relative;
 }
 .title {
     font-size: $title-size;
@@ -18,4 +19,80 @@
 .description {
     font-size: $text-size;
     text-align: center;
+}
+.slider {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+.items {
+    width: 100%;
+    overflow-x: scroll;
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 30px;
+    -ms-scroll-snap-points-x: repeat(100%);
+    scroll-snap-points-x: repeat(100%);
+    scroll-behavior: smooth;
+    -ms-scroll-snap-type: mandatory;
+    scroll-snap-type: mandatory;
+    -webkit-scroll-snap-type: mandatory;
+    -webkit-scroll-snap-points-x: repeat(100%);
+
+    &.overflow {
+        overflow-x: hidden;
+    }
+}
+.sliderItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    flex: 0 0 66.666%;
+    gap: 50px;
+    transition: .3s ease;
+    
+    &.active {
+        padding: 0 10px;
+        position: absolute;
+        height: 100vh;
+        overflow-y: scroll;
+        width: 100%;
+        top: -100%;
+        left: 50%;
+        z-index: 3;
+        transform: translate(-50%, 0);
+        background-color: $yellow;
+        .text {
+            display: block;
+            visibility: visible;
+            opacity: 1;
+        }
+    }
+}
+.img {
+    width: 100%;
+}
+.text {
+    display: none;
+    visibility: hidden;
+    opacity: 0;
+    transition: .2s ease-in-out;
+    font-size: $text-size;
+}
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+}
+.button {
+    width: 40px;
+    height: 40px;
+    background-color: #fff;
+}
+.indicators {
+    display: flex;
+    gap: 30px;
 }
