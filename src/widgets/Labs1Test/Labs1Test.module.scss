@@ -26,6 +26,13 @@
     padding: 50px 30px;
 }
 
+.prevent {
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+}
+
 .finger {
     background-color: green;
 }

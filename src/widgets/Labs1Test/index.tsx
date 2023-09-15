@@ -88,6 +88,7 @@ const FingerTest = () => {
             </button>
             <div className={styles.eye}>
               <div
+                className={styles.prevent}
                 onTouchStart={(event) => {
                   event.stopPropagation();
                 }}
