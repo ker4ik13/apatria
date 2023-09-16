@@ -15,7 +15,7 @@ const TestPage = () => {
         <p className={styles.number}>{+id + 1}/10</p>
         <BlueTitle title={test.ask} />
         <div className={styles.imgWrapper}>
-          <img src='' className={styles.img} />
+          <img src={test.image} className={styles.img} />
         </div>
         <WhiteTitle title={test.title} />
 

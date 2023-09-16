@@ -26,4 +26,12 @@
     aspect-ratio: 1/1;
     border-radius: 50%;
     margin-bottom: 30px;
+    position: relative;
+}
+.img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 50%;
 }
