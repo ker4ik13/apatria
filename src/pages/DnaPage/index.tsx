@@ -3,6 +3,7 @@ import styles from "./DnaPage.module.scss";
 import { Chart } from "chart.js/auto";
 import { useEffect, useRef } from "react";
 import { generateArrays } from "@/features/generateRandomPercentage";
+import Close from "@/shared/ui/Close/Close";
 
 const mockNation: string[] = [
   "Еврей",
@@ -47,7 +48,7 @@ const DnaPage = () => {
   return (
     <div className={styles.dnaPage}>
       <div className={styles.header}>
-        <Link to={"/"} className={styles.close}></Link>
+        <Close color='white' to='/' />
       </div>
       <div className={styles.content}>
         <canvas

@@ -1,0 +1,6 @@
+@import '@/shared/styles/_vars';
+
+.testResultPage {
+    @include container();
+    background-color: $red;
+}

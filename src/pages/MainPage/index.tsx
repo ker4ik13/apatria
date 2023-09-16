@@ -20,7 +20,14 @@ const MainPage = () => {
       <Labs />
       <LabsVariable id={1} img={labs1} title='title' text='text' />
       <FingerTest />
-      <LabsVariable id={2} img={labs2} title='title' text='text' />
+      <LabsVariable
+        id={2}
+        img={labs2}
+        title='title'
+        text='text'
+        buttonLink='/test/0'
+        buttonText='Пройти тест'
+      />
       <LabsVariable id={3} img={labs3} title='title' text='text' />
       <LabsVariable id={4} img={labs4} title='title' text='text' />
       <LabsVariable id={5} img={labs5} title='title' text='text' />
