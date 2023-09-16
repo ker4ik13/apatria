@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import styles from "./DnaPage.module.scss";
 import { Chart } from "chart.js/auto";
 import { useEffect, useRef } from "react";

@@ -1,10 +1,10 @@
 @import '@/shared/styles/_vars';
 
 .link {
-    padding: 30px;
+    padding: 20px;
     width: 100%;
     margin-top: 30px;
-    border-radius: 8px;
+    border-radius: 16px;
     position: relative;
     z-index: 1;
     background-color: $blue;
@@ -12,12 +12,14 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: .1s linear;
 
     p {
         color: $blue;
-        font-size: $button-size;
+        font-size: $button-big;
         position: relative;
         z-index: 2;
+        transition: .1s linear;
     }
     
     &::before {
@@ -29,6 +31,23 @@
         z-index: 1;
         width: 100%;
         height: 100%;
-        border-radius: 8px;
+        border-radius: 16px;
+        transition: .1s linear;
+    }
+
+    &:hover {
+        background-color: #fff;
+        p {
+            color: #fff;
+        }
+        &::before {
+            background-color: $blue;
+        }
+    }
+}
+
+@media (max-width: $mobile) {
+    .link p {
+        font-size: $button-small;
     }
 }

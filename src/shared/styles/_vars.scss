@@ -7,10 +7,18 @@ $green: #0F9D58;
 $light-blue: #4285F4;
 $light-red: #DB4437;
 
+$title-big: 60px;
+$title-small: 30px;
+$title-mini: 20px;
+$button-big: 28px;
+$button-small: 20px;
+$button-mini: 16px;
+$text-big: 36px;
+$text-small: 26px;
+$text-mini: 20px;
 
-$title-size: 70px;
-$button-size: 28px;
-$text-size: 40px;
+$mobile: 700px;
+$small: 380px;
 
 @mixin container() {
     max-width: 768px;

@@ -13,11 +13,11 @@
     position: relative;
 }
 .title {
-    font-size: $title-size;
+    font-size: $title-big;
     text-align: center;
 }
 .description {
-    font-size: $text-size;
+    font-size: $text-big;
     text-align: center;
 }
 .slider {
@@ -86,7 +86,7 @@
     visibility: hidden;
     opacity: 0;
     transition: .2s ease-in-out;
-    font-size: $text-size;
+    font-size: $text-big;
 }
 .buttons {
     display: flex;
@@ -102,4 +102,16 @@
 .indicators {
     display: flex;
     gap: 30px;
+}
+
+@media (max-width: $mobile) {
+    .title {
+        font-size: $title-small;
+    }
+    .description {
+        font-size: $text-small;
+    }
+    .text {
+        font-size: $text-small;
+    }
 }

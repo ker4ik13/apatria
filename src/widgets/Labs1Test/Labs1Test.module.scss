@@ -52,7 +52,7 @@
     border: 3px solid #fff;
     border-radius: 8px;
     margin-top: 30px;
-    font-size: $title-size;
+    font-size: $title-big;
     text-transform: uppercase;
     display: flex;
     justify-content: center;
@@ -78,10 +78,15 @@
 }
 
 .next {
-    color: #000;
-    font-size: $title-size;
+    color: #fff;
+    font-size: $title-big;
     margin-top: 50px;
     text-decoration: none;
+    background-color: $blue;
+    padding: 10px 0;
+    border-radius: 16px;
+    width: 100%;
+    text-align: center;
 }
 
 .eye {
@@ -105,7 +110,7 @@
     background: none;
     outline: none;
     border: none;
-    font-size: $title-size;
+    font-size: $title-big;
     margin-top: 30px;
     cursor: pointer;
 }
@@ -117,10 +122,22 @@
     background: none;
     outline: none;
     border: none;
-    font-size: $title-size;
+    font-size: $title-big;
     margin-top: 30px;
     cursor: pointer;
     background-color: $blue;
     border-radius: 8px;
-    padding: 0 30px;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+}
+
+@media (max-width: $mobile) {
+    .next {
+        font-size: $title-small;
+        
+    }
+    .resButton {
+        font-size: $title-small;
+    }
 }

@@ -8,7 +8,7 @@
 
 .header {
     background-color: $yellow;
-    border-radius: 8px;
+    border-radius: 16px;
     position: relative;
     height: 100%;
     width: 100%;
@@ -21,13 +21,13 @@
     left: 8px;
     width: 100%;
     padding: 10px;
-    border-radius: 8px;
+    border-radius: 16px;
     background-color: $blue;
 }
 
 .content {
     margin-top: 30px;
-    font-size: $text-size;
+    font-size: $text-big;
     color: $blue;
     text-transform: uppercase;
     padding: 0 10px;
@@ -41,4 +41,16 @@
 .text {
     margin-top: 16px;
     cursor: text;
+}
+
+@media (max-width: $mobile) {
+    .content {
+        font-size: $text-small;
+    }
+    .title {
+        font-size: $title-small;
+    }
+    .text {
+        font-size: $text-small;
+    }
 }

@@ -26,7 +26,7 @@
     text-align: center;
     max-width: 200px;
     text-transform: uppercase;
-    font-size: $button-size;
+    font-size: $button-big;
 }
 .videoFrame {
     border-radius: 8px;
@@ -49,4 +49,17 @@
 
 iframe {
     width: 100%;
+}
+@media (max-width: $mobile) {
+    .logoText {
+        font-size: $button-small;
+        bottom: 30px;
+    }
+}
+@media (max-width: $small) {
+    .logoText {
+        max-width: 150px;
+        font-size: $button-mini;
+        bottom: 20px;
+    }
 }

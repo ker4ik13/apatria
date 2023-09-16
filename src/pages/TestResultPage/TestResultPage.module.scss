@@ -3,4 +3,42 @@
 .testResultPage {
     @include container();
     background-color: $red;
+    padding-top: 20px;
+}
+.close {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 100px;
+}
+.title {
+    font-size: $text-big;
+    color: #fff;
+    text-align: center;
+}
+.result {
+    margin: 0 auto;
+    margin-top: 50px;
+    width: 90%;
+    background-color: $blue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 30px;
+    padding: 30px 0;
+}
+.qr {
+    width: 50%;
+}
+.text {
+    color: #fff;
+    font-size: $button-big;
+}
+.screenshot {
+    margin-top: 50px;
+    color: #fff;
+    text-align: center;
+    max-width: 200px;
+    margin: 20px auto 0;
 }

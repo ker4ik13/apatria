@@ -1,5 +1,5 @@
 import { Route, Routes, BrowserRouter } from "react-router-dom";
-import { lazy } from "react";
+// import { lazy } from "react";
 // Pages
 import MainPage from "@/pages/MainPage";
 import DocsPage from "@/pages/DocsPage";
