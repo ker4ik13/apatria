@@ -21,6 +21,8 @@
     text-align: center;
 }
 .slider {
+    margin-top: 30px;
+    padding: 0 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -39,6 +41,7 @@
     scroll-snap-type: mandatory;
     -webkit-scroll-snap-type: mandatory;
     -webkit-scroll-snap-points-x: repeat(100%);
+    transform: skew(15deg, 10deg, 10deg, 10deg);
 
     &.overflow {
         overflow-x: hidden;
@@ -50,19 +53,20 @@
     align-items: center;
     justify-content: flex-start;
     flex: 0 0 66.666%;
-    gap: 50px;
-    transition: .3s ease;
+    gap: 30px;
+    transition: .2s ease;
+    max-height: 100vh;
     
     &.active {
-        padding: 0 10px;
-        position: absolute;
-        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, 0);
+        padding: 10px;
+        min-height: 100vh;
         overflow-y: scroll;
         width: 100%;
-        bottom: 0;
-        left: 50%;
         z-index: 3;
-        transform: translate(-50%, 0);
         background-color: $yellow;
         .text {
             display: block;
@@ -80,6 +84,13 @@
     pointer-events: none;
     -o-object-fit: cover;
     object-fit: cover;
+}
+
+.content {
+    overflow-y: scroll;
+    height: -webkit-min-content;
+    height: -moz-min-content;
+    height: min-content;
 }
 .text {
     display: none;

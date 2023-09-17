@@ -6,9 +6,10 @@ import { generateArrays } from "@/features/generateRandomPercentage";
 
 const fakeInfo = ["hight", "medium", "low"];
 
-const [percentagesArray] = generateArrays(fakeInfo);
+const [valuesArray, percentagesArray] = generateArrays(fakeInfo);
 
 const MicResultPage = () => {
+  valuesArray.length;
   return (
     <div className={styles.micResultPage}>
       <div className={styles.header}>

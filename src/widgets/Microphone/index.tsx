@@ -1,27 +1,30 @@
 import { useNavigate } from "react-router-dom";
 import styles from "./Microphone.module.scss";
 import { useEffect, useRef, useState } from "react";
-
-// interface IMicrophoneProps {}
+import mic1Img from "@/images/icons/mic1.webp";
+import mic2Img from "@/images/icons/mic2.webp";
 
 const Microphone = () => {
   const [recording, setRecording] = useState(false);
   const [dirty, setDirty] = useState(false);
-  const stopButton = useRef<HTMLButtonElement>(null);
+
+  const micImg = useRef<HTMLImageElement>(null);
   const resultButton = useRef<HTMLButtonElement>(null);
   const micButton = useRef<HTMLButtonElement>(null);
   const rec = useRef<HTMLDivElement>(null);
 
+  const navigate = useNavigate();
+
   useEffect(() => {
-    if (stopButton.current && rec.current && micButton.current && !recording) {
+    if (rec.current && micButton.current && micImg.current && !recording) {
       rec.current.classList.remove(styles.active);
-      stopButton.current.disabled = true;
       micButton.current.classList.remove(styles.active);
+      micImg.current.src = mic2Img;
     }
-    if (stopButton.current && rec.current && micButton.current && recording) {
+    if (rec.current && micButton.current && micImg.current && recording) {
       rec.current.classList.add(styles.active);
       micButton.current.classList.add(styles.active);
-      stopButton.current.disabled = false;
+      micImg.current.src = mic1Img;
     }
   }, [recording]);
   useEffect(() => {
@@ -33,7 +36,6 @@ const Microphone = () => {
     }
   }, [dirty]);
 
-  const navigate = useNavigate();
   return (
     <div className={styles.microphonePage}>
       <div className={styles.header}>
@@ -41,27 +43,26 @@ const Microphone = () => {
           <span>REC</span>
           <div className={styles.rec} ref={rec}></div>
         </div>
-        <button
-          type='button'
-          className={styles.stop}
-          ref={stopButton}
-          onClick={() => {
-            setRecording(false);
-            setDirty(true);
-          }}
-        >
-          Stop
-        </button>
       </div>
       <button
         type='button'
         className={styles.microphoneButton}
         ref={micButton}
         onClick={() => {
-          setRecording(true);
+          setDirty(true);
+          if (recording) {
+            setRecording(false);
+          } else {
+            setRecording(true);
+          }
         }}
       >
-        <img src='' alt='' className={styles.img} />
+        <img
+          src={mic1Img}
+          alt='Microphone'
+          className={styles.img}
+          ref={micImg}
+        />
       </button>
       <div className={styles.mic}></div>
       <button
