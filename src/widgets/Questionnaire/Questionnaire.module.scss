@@ -1,0 +1,12 @@
+@import '@/shared/styles/_vars';
+
+.questionnaire {
+    @include container();
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-color: $yellow;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}

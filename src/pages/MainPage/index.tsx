@@ -10,6 +10,8 @@ import labs6 from "@/images/labs/6.jpeg";
 import FingerTest from "@/widgets/Labs1Test";
 import FirstPage from "@/widgets/FirstPage";
 import Slider from "@/widgets/SliderPage";
+import Questionnaire from "@/widgets/Questionnaire";
+import Microphone from "@/widgets/Microphone";
 
 const MainPage = () => {
   return (
@@ -30,8 +32,10 @@ const MainPage = () => {
       />
       <LabsVariable id={3} img={labs3} title='title' text='text' />
       <LabsVariable id={4} img={labs4} title='title' text='text' />
+      <Microphone />
       <LabsVariable id={5} img={labs5} title='title' text='text' />
       <LabsVariable id={6} img={labs6} title='title' text='text' />
+      <Questionnaire link='https://google.com' text='Google' />
     </>
   );
 };

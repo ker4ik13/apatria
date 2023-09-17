@@ -1,0 +1,51 @@
+@import '@/shared/styles/_vars';
+
+.micResultPage {
+    @include container();
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-color: $yellow;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+.header {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 30px;
+}
+.sliders {
+    margin-top: 30px;
+    height: 25vh;
+    max-width: 60%;
+}
+.info {
+    margin-top: 50px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+    justify-content: center;
+}
+.infoItem {
+    width: 100%;
+}
+.item {
+    display: inline-block;
+    background-color: $blue;
+    color: #fff;
+    padding: 0 10px;
+    font-size: $text-mini;
+    max-width: 100%;
+}
+.screenshot {
+    margin-top: 20px;
+    color: $red;
+    text-align: center;
+    max-width: 250px;
+    margin: 20px auto 0;
+    font-size: $text-mini;
+}
