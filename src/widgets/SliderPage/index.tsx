@@ -39,7 +39,7 @@ const Slider = () => {
                 }}
               >
                 <img src={item} className={styles.img} draggable={false} />
-                <div className={styles.content}>
+                <div className={styles.contentText}>
                   <p className={styles.text}>
                     Lorem ipsum, dolor sit amet consectetur adipisicing elit.
                     Rerum veritatis, non, eveniet laudantium nesciunt dolore
@@ -58,6 +58,14 @@ const Slider = () => {
                 </div>
               </div>
             ))}
+          </div>
+          <div className={styles.indicators}>
+            <span className={styles.indicator}></span>
+            <span className={styles.indicator}></span>
+            <span className={styles.indicator}></span>
+            <span className={styles.indicator}></span>
+            <span className={styles.indicator}></span>
+            <span className={styles.indicator}></span>
           </div>
         </div>
       </div>

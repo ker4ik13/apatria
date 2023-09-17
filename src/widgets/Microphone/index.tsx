@@ -49,12 +49,14 @@ const Microphone = () => {
         className={styles.microphoneButton}
         ref={micButton}
         onClick={() => {
-          setDirty(true);
           if (recording) {
             setRecording(false);
           } else {
             setRecording(true);
           }
+          setTimeout(() => {
+            setDirty(true);
+          }, 5000);
         }}
       >
         <img
@@ -62,6 +64,7 @@ const Microphone = () => {
           alt='Microphone'
           className={styles.img}
           ref={micImg}
+          draggable={false}
         />
       </button>
       <div className={styles.mic}></div>

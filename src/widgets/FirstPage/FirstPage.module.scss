@@ -33,6 +33,8 @@
     position: relative;
     z-index: 2;
     width: 100%;
+    aspect-ratio: 16/9;
+    height: auto;
 
     &:before {
         content: '';
@@ -49,6 +51,8 @@
 
 iframe {
     width: 100%;
+    height: auto;
+    aspect-ratio: 16/9;
 }
 @media (max-width: $mobile) {
     .logoText {
