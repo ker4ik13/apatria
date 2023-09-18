@@ -31,11 +31,11 @@ const Microphone = () => {
       micImg.current.src = mic2Img;
     }
     if (rec.current && micButton.current && micImg.current && recording) {
-      setTimeout(() => {
-        if (micButton.current) {
-          micButton.current.disabled = false;
-        }
-      }, 5000);
+      // setTimeout(() => {
+      //   if (micButton.current) {
+      //     micButton.current.disabled = false;
+      //   }
+      // }, 5000);
       rec.current.classList.add(styles.active);
       micButton.current.classList.add(styles.active);
       micImg.current.src = mic1Img;
@@ -68,9 +68,9 @@ const Microphone = () => {
             setRecording(false);
             handleTimer(false);
           } else {
-            if (micButton.current && !dirty) {
-              micButton.current.disabled = true;
-            }
+            // if (micButton.current && !dirty) {
+            //   micButton.current.disabled = true;
+            // }
             setRecording(true);
             handleTimer(true);
           }
