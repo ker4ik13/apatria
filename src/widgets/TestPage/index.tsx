@@ -27,10 +27,14 @@ const TestPage = () => {
             <WhiteLink text={test.variant4} to={"/test-result/"} />
           </>
         )}
-        <WhiteLink text={test.variant1} to={`/test/${+id + 1}`} />
-        <WhiteLink text={test.variant2} to={`/test/${+id + 1}`} />
-        <WhiteLink text={test.variant3} to={`/test/${+id + 1}`} />
-        <WhiteLink text={test.variant4} to={`/test/${+id + 1}`} />
+        {+id !== 9 && (
+          <>
+            <WhiteLink text={test.variant1} to={`/test/${+id + 1}`} />
+            <WhiteLink text={test.variant2} to={`/test/${+id + 1}`} />
+            <WhiteLink text={test.variant3} to={`/test/${+id + 1}`} />
+            <WhiteLink text={test.variant4} to={`/test/${+id + 1}`} />
+          </>
+        )}
       </div>
     );
   }

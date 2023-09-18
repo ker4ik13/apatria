@@ -52,6 +52,10 @@
         -webkit-animation: microphone 1.5s ease-in-out infinite;
         animation: microphone 1.5s ease-in-out infinite;
     }
+
+    &:disabled {
+        background-color: darken($pink, 5%);
+    }
 }
 .img {
     max-width: 20vw;

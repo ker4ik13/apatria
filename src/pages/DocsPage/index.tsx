@@ -1,6 +1,6 @@
 import { useParams } from "react-router-dom";
 import styles from "./DocsPage.module.scss";
-import Arrow from "@/shared/ui/Arrow";
+import Arrow, { ArrowDirection } from "@/shared/ui/Arrow";
 import docs1 from "@/data/docs/docs1.png";
 import docs2 from "@/data/docs/docs2.png";
 import docs3 from "@/data/docs/docs3.png";
@@ -12,7 +12,7 @@ const DocsPage = () => {
     return (
       <div className={styles.docsPage}>
         <div className={styles.header}>
-          <Arrow to='/' />
+          <Arrow to='/' direction={ArrowDirection.back} />
           <h2 className={styles.title}>{id}</h2>
         </div>
         <div className={styles.content}>

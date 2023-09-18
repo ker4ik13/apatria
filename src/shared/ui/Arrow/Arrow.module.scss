@@ -12,6 +12,19 @@
     width: 100%;
     padding: 14px 14px 10px 10px;
 }
+.next {
+    background-color: $blue;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+    max-width: 60px;
+    width: 100%;
+    padding: 14px 14px 10px 10px;
+    transform: rotate(180deg);
+}
 
 .arrow {
     position: relative;

@@ -1,0 +1,12 @@
+@import '@/shared/styles/_vars';
+
+.preloader {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    background-color: $yellow;
+    color: $blue;
+    font-size: $text-big;
+}

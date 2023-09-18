@@ -1,6 +1,6 @@
+import { useEffect, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import styles from "./Microphone.module.scss";
-import { useEffect, useRef, useState } from "react";
 import mic1Img from "@/images/icons/mic1.webp";
 import mic2Img from "@/images/icons/mic2.webp";
 
@@ -15,6 +15,15 @@ const Microphone = () => {
 
   const navigate = useNavigate();
 
+  const handleTimer = (isStart: boolean) => {
+    const timeout = setTimeout(() => {
+      setDirty(true);
+    }, 5000);
+    if (!isStart) {
+      clearTimeout(timeout);
+    }
+  };
+
   useEffect(() => {
     if (rec.current && micButton.current && micImg.current && !recording) {
       rec.current.classList.remove(styles.active);
@@ -22,6 +31,11 @@ const Microphone = () => {
       micImg.current.src = mic2Img;
     }
     if (rec.current && micButton.current && micImg.current && recording) {
+      setTimeout(() => {
+        if (micButton.current) {
+          micButton.current.disabled = false;
+        }
+      }, 5000);
       rec.current.classList.add(styles.active);
       micButton.current.classList.add(styles.active);
       micImg.current.src = mic1Img;
@@ -51,12 +65,14 @@ const Microphone = () => {
         onClick={() => {
           if (recording) {
             setRecording(false);
+            handleTimer(false);
           } else {
+            if (micButton.current && !dirty) {
+              micButton.current.disabled = true;
+            }
             setRecording(true);
+            handleTimer(true);
           }
-          setTimeout(() => {
-            setDirty(true);
-          }, 5000);
         }}
       >
         <img
