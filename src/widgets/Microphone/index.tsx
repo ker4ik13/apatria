@@ -62,7 +62,8 @@ const Microphone = () => {
         type='button'
         className={styles.microphoneButton}
         ref={micButton}
-        onClick={() => {
+        onClick={(event) => {
+          event.stopPropagation();
           if (recording) {
             setRecording(false);
             handleTimer(false);
