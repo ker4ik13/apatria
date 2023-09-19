@@ -8,6 +8,7 @@ import fingerGif from "@/images/finger.gif";
 import eyeGif from "@/images/eye-scanner.gif";
 import fingerImg from "@/images/fingerImg.jpg";
 import eyeImg from "@/images/eye-scannerImg.jpg";
+import glaz from "@/images/glaz.png";
 
 const FingerTest = () => {
   const [fingerTest, setFingerTest] = useState(fingerStates.notStarted);
@@ -114,6 +115,12 @@ const FingerTest = () => {
                   className={styles.eyeGif}
                   draggable={false}
                   ref={eye}
+                />
+                <img
+                  src={glaz}
+                  alt='Eye'
+                  className={styles.glaz}
+                  draggable={false}
                 />
               </div>
             </div>

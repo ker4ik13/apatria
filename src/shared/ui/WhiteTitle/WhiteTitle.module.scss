@@ -7,8 +7,7 @@
     background-color: $blue;
     width: 100%;
     text-align: center;
-    padding-top: 20px;
-    padding-bottom: 30px;
+    padding: 5px 5px 15px;
 }
 .text {
     font-size: $title-big;
@@ -31,5 +30,10 @@
 @media (max-width: $mobile) {
     .text {
         font-size: $title-small;
+    }
+}
+@media (max-width: $small) {
+    .text {
+        font-size: $title-mini;
     }
 }

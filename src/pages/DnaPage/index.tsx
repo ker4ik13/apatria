@@ -47,7 +47,7 @@ const DnaPage = () => {
   return (
     <div className={styles.dnaPage}>
       <div className={styles.header}>
-        <Close color='white' to='/' />
+        <Close color='white' to='/#labs' />
       </div>
       <div className={styles.content}>
         <canvas

@@ -28,6 +28,9 @@
     align-items: center;
     justify-content: flex-start;
 }
+.close {
+    display: none;
+}
 .items {
     width: 100%;
     overflow-x: scroll;
@@ -52,7 +55,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    flex: 0 0 66.666%;
+    flex: 0 0 100%;
     gap: 30px;
     transition: .2s ease;
     padding-bottom: 10px;
@@ -73,6 +76,11 @@
             display: block;
             visibility: visible;
             opacity: 1;
+        }
+        .close {
+            display: flex;
+            width: 100%;
+            justify-content: flex-start;
         }
     }
 }
@@ -111,20 +119,23 @@
 }
 .indicators {
     display: flex;
-    gap: 30px;
-}
-.indicators {
-    display: flex;
     align-items: center;
     justify-content: center;
-    gap: 10px;
+    gap: 20px;
     margin-top: 10px;
 }
 .indicator {
-    width: 10px;
-    height: 10px;
+    width: 14px;
+    height: 14px;
     border-radius: 50%;
     background-color: $blue;
+    border: none;
+    outline: none;
+    opacity: .7;
+
+    &.active {
+        opacity: 1;
+    }
 }
 
 @media (max-width: $mobile) {

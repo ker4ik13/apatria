@@ -3,6 +3,7 @@ import { Suspense, lazy } from "react";
 // Pages
 import MainPage from "@/pages/MainPage";
 import Preloader from "@/shared/ui/Preloader";
+import PredResultPage from "@/pages/PredResultPage";
 // import DocsPage from "@/pages/DocsPage";
 // import DnaPage from "@/pages/DnaPage";
 // import TestPage from "@/widgets/TestPage";
@@ -22,6 +23,7 @@ export const RouterProvider = () => {
     <BrowserRouter>
       <Routes>
         <Route index element={<MainPage />} />
+        <Route path='/:scrollTo' element={<MainPage />} />
         <Route
           path='/docs/:id'
           element={
@@ -69,6 +71,10 @@ export const RouterProvider = () => {
               <PhotoPage />
             </Suspense>
           }
+        />
+        <Route
+          path='/predresult'
+          element={<PredResultPage link='/test-result/' />}
         />
       </Routes>
     </BrowserRouter>

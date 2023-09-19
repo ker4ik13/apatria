@@ -13,8 +13,37 @@ import Slider from "@/widgets/SliderPage";
 import Questionnaire from "@/widgets/Questionnaire";
 import Microphone from "@/widgets/Microphone";
 import PhotoPage from "../PhotoPage";
+import { useLocation } from "react-router-dom";
+import { useEffect } from "react";
 
 const MainPage = () => {
+  const { hash } = useLocation();
+
+  useEffect(() => {
+    if (hash === "#labs") {
+      const scrollTo = document.querySelector("#labs");
+
+      if (scrollTo) {
+        const x = scrollTo.scrollHeight + window.innerHeight * 2;
+
+        window.scrollTo({
+          top: x,
+          behavior: "smooth",
+        });
+      }
+    } else if (hash) {
+      const scrollTo = document.querySelector(hash);
+
+      if (scrollTo) {
+        const x = scrollTo.scrollHeight + scrollTo.clientHeight;
+
+        window.scrollTo({
+          top: x,
+          behavior: "smooth",
+        });
+      }
+    }
+  }, [hash]);
   return (
     <>
       <FirstPage />

@@ -18,7 +18,7 @@ const allLabs: string[] = [
 
 const Labs = () => {
   return (
-    <div className={styles.labsPage}>
+    <div className={styles.labsPage} id='labs'>
       <WhiteTitle title='Labs' />
       <div className={styles.variables}>
         {allLabs.map((lab, index) => (

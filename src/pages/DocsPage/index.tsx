@@ -12,7 +12,7 @@ const DocsPage = () => {
     return (
       <div className={styles.docsPage}>
         <div className={styles.header}>
-          <Arrow to='/' direction={ArrowDirection.back} />
+          <Arrow to='/#droites' direction={ArrowDirection.back} />
           <h2 className={styles.title}>{id}</h2>
         </div>
         <div className={styles.content}>

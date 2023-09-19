@@ -31,6 +31,19 @@
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+    position: relative;
+}
+.glaz {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    max-width: 100%;
+    width: 50%;
 }
 
 .finger {

@@ -20,11 +20,11 @@ const TestResultPage = () => {
   return (
     <div className={styles.testResultPage}>
       <div className={styles.close}>
-        <Close to='/' color='black' />
+        <Close to='/#labs' color='black' />
       </div>
       <p className={styles.title}>Ваш результат теста!</p>
       <div className={styles.result}>
-        <img src={qr} alt='Qr-code' className={styles.qr} />
+        <img src={qr} alt='Qr-code' className={styles.qr} draggable={false} />
         <p className={styles.text}>{fakeText[random]}</p>
       </div>
       <p className={styles.screenshot}>

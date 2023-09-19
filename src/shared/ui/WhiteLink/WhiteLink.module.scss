@@ -1,7 +1,7 @@
 @import '@/shared/styles/_vars';
 
 .link {
-    padding: 20px;
+    padding: 10px 10px 20px;
     width: 100%;
     margin-top: 20px;
     border-radius: 16px;
@@ -49,5 +49,10 @@
 @media (max-width: $mobile) {
     .link p {
         font-size: $button-small;
+    }
+}
+@media (max-width: $small) {
+    .link p {
+        font-size: $button-mini;
     }
 }

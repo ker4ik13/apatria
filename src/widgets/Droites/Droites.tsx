@@ -4,7 +4,7 @@ import WhiteLink from "@/shared/ui/WhiteLink";
 
 const Droites = () => {
   return (
-    <div className={styles.droitesPage}>
+    <div className={styles.droitesPage} id='droites'>
       <WhiteTitle title='Droites' />
       <WhiteLink to='/docs/1' text='1. dmsakdjhaskds' />
       <WhiteLink to='/docs/2' text='2. dmsakdjhaskds' />
