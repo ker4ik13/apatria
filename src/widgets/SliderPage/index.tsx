@@ -7,9 +7,8 @@ import slider4Img from "@/images/slider/slider4.jpg";
 import slider5Img from "@/images/slider/slider5.jpg";
 import slider6Img from "@/images/slider/slider6.jpg";
 import Close from "@/shared/ui/Close/Close";
-import "bootstrap/dist/css/bootstrap.css";
-import "bootstrap/dist/js/bootstrap.js";
 import { useRef } from "react";
+import { handleScroll } from "./handleScroll";
 
 const allSliderImg: string[] = [
   slider1Img,
@@ -24,38 +23,26 @@ const Slider = () => {
   const items = useRef<HTMLDivElement>(null);
   const indicators = useRef<HTMLDivElement>(null);
 
-  // const handleScroll = () => {
-  //   if (items.current && indicators.current) {
-  //     const allItems = items.current.children;
-  //     const nowScroll = items.current.scrollLeft;
-  //     console.log(nowScroll);
-  //     const scrollWidth1 = allItems[0].scrollWidth;
-  //     console.log(scrollWidth1);
-  //   }
-  // };
-
   const handleSlider = (index: number) => {
     if (items.current && indicators.current) {
       const allItems = items.current.children;
-      if (index >= 1) {
-        indicators.current.childNodes.forEach((item) => {
-          item.classList.remove(styles.active);
-        });
-        indicators.current.children[index].classList.add(styles.active);
-        items.current.scrollTo({
-          left: allItems[index].scrollWidth * index + 30 * index,
-          behavior: "smooth",
-        });
-      } else {
-        indicators.current.childNodes.forEach((item) => {
-          item.classList.remove(styles.active);
-        });
-        indicators.current.children[index].classList.add(styles.active);
-        items.current.scrollTo({
-          left: allItems[index].scrollWidth * index,
-          behavior: "smooth",
-        });
-      }
+
+      const allArray: ChildNode[] = [];
+      indicators.current.childNodes.forEach((item) => {
+        allArray.push(item);
+      });
+
+      const elems = Array.prototype.slice.call(allArray);
+
+      elems.map((item) => {
+        item.classList.remove(styles.active);
+      });
+      indicators.current.children[index].classList.add(styles.active);
+
+      items.current.scrollTo({
+        left: allItems[index].scrollWidth * index + 30 * index,
+        behavior: "smooth",
+      });
     }
   };
   return (
@@ -65,7 +52,11 @@ const Slider = () => {
         <h2 className={styles.title}>ZPRs</h2>
         <p className={styles.description}>зоны распределения</p>
         <div className={styles.slider}>
-          <div className={styles.items} ref={items}>
+          <div
+            className={styles.items}
+            ref={items}
+            onScroll={() => handleScroll(items, indicators, styles)}
+          >
             {allSliderImg.map((item, index) => (
               <div
                 className={styles.sliderItem}
@@ -104,10 +95,14 @@ const Slider = () => {
             ))}
           </div>
           <div className={styles.indicators} ref={indicators}>
-            {allSliderImg.map((item, index) => (
+            {allSliderImg.map((_, index) => (
               <button
                 type='button'
-                className={styles.indicator}
+                className={
+                  index === 0
+                    ? `${styles.indicator} ${styles.active}`
+                    : styles.indicator
+                }
                 key={index}
                 onClick={() => handleSlider(index)}
               ></button>
