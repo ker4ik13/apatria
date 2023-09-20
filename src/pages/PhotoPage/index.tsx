@@ -1,47 +1,49 @@
-import { useParams } from "react-router-dom";
 import styles from "./PhotoPage.module.scss";
 import { ninjaPhotos } from "@/data/photos";
-import Arrow, { ArrowDirection } from "@/shared/ui/Arrow";
-import Close from "@/shared/ui/Close/Close";
+import { useRef } from "react";
+import { handleIndicators } from "@/features/handleIndicators";
+import { handleScrollPhotos } from "@/features/handleScrollPhotos";
 
-interface IPhotoPageProps {
-  single?: boolean;
-}
+const PhotoPage = () => {
+  const items = useRef<HTMLDivElement>(null);
+  const indicators = useRef<HTMLDivElement>(null);
 
-const PhotoPage = ({ single }: IPhotoPageProps) => {
-  const { id } = useParams();
-  if (single) {
-    return (
-      <div className={styles.photoPage}>
-        <p className={styles.text}>{ninjaPhotos[0].text1}</p>
-        <img src={ninjaPhotos[0].photo} alt='Photo' className={styles.img} />
-        <p className={styles.text2}>{ninjaPhotos[0].text2}</p>
-        {ninjaPhotos[0].text3 && (
-          <p className={styles.text3}>{ninjaPhotos[0].text3}</p>
-        )}
-        <div className={styles.footer}>
-          <Arrow to={`/photo/1`} direction={ArrowDirection.next} />
+  return (
+    <div className={styles.photoPage}>
+      <div className={styles.slider}>
+        <div
+          className={styles.items}
+          ref={items}
+          onScroll={() => handleScrollPhotos(items, indicators, styles)}
+        >
+          {ninjaPhotos.map((item, index) => (
+            <div className={styles.sliderItem} key={index}>
+              <p className={styles.text}>{item.text1}</p>
+              <img src={item.photo} alt='Photo' className={styles.img} />
+              <p className={styles.text2}>{item.text2}</p>
+              {item.text3 && <p className={styles.text3}>{item.text3}</p>}
+            </div>
+          ))}
         </div>
       </div>
-    );
-  } else if (id) {
-    return (
-      <div className={`${styles.photoPage} ${styles.photoSinglePage}`}>
-        <p className={styles.text}>{ninjaPhotos[+id].text1}</p>
-        <img src={ninjaPhotos[+id].photo} alt='Photo' className={styles.img} />
-        <p className={styles.text2}>{ninjaPhotos[+id].text2}</p>
-        {ninjaPhotos[+id].text3 && (
-          <p className={styles.text3}>{ninjaPhotos[+id].text3}</p>
-        )}
-        <div className={styles.footer}>
-          {!ninjaPhotos[+id + 1] && <Close color='black' to='/' />}
-          {ninjaPhotos[+id + 1] && (
-            <Arrow to={`/photo/${+id + 1}`} direction={ArrowDirection.next} />
-          )}
-        </div>
+      <div className={styles.indicators} ref={indicators}>
+        {ninjaPhotos.map((_, index) => (
+          <button
+            type='button'
+            className={
+              index === 0
+                ? `${styles.indicator} ${styles.active}`
+                : styles.indicator
+            }
+            key={index}
+            onClick={() =>
+              handleIndicators({ index, indicators, items, styles })
+            }
+          ></button>
+        ))}
       </div>
-    );
-  }
+    </div>
+  );
 };
 
 export default PhotoPage;

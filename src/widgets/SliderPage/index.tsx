@@ -8,8 +8,8 @@ import slider5Img from "@/images/slider/slider5.jpg";
 import slider6Img from "@/images/slider/slider6.jpg";
 import Close from "@/shared/ui/Close/Close";
 import { useRef } from "react";
-import { handleScroll } from "./handleScroll";
-import { handleIndicators } from "./handleIndicators";
+import { handleScroll } from "@/features/handleScroll";
+import { handleIndicators } from "@/features/handleIndicators";
 
 const allSliderImg: string[] = [
   slider1Img,

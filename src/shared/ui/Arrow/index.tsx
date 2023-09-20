@@ -10,9 +10,10 @@ export enum ArrowDirection {
 interface IArrow {
   to: string;
   direction: ArrowDirection;
+  onClick?: () => void;
 }
 
-const Arrow = ({ to, direction }: IArrow) => {
+const Arrow = ({ to, direction, onClick }: IArrow) => {
   if (direction === ArrowDirection.back) {
     return (
       <Link className={styles.back} to={to}>
@@ -22,7 +23,7 @@ const Arrow = ({ to, direction }: IArrow) => {
     );
   }
   return (
-    <Link className={styles.next} to={to}>
+    <Link className={styles.next} to={to} {...onClick}>
       <img src={arrow} className={styles.arrow} />
       <span className={styles.bg}></span>
     </Link>

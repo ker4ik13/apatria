@@ -18,32 +18,8 @@ import { useEffect } from "react";
 
 const MainPage = () => {
   const { hash } = useLocation();
-  console.log(hash);
 
   useEffect(() => {
-    // if (hash === "#labs") {
-    //   const scrollTo = document.querySelector("#labs");
-
-    //   if (scrollTo) {
-    //     const x = scrollTo.scrollHeight + window.innerHeight * 2;
-
-    //     window.scrollTo({
-    //       top: x,
-    //       behavior: "smooth",
-    //     });
-    //   }
-    // if (hash) {
-    //   const scrollTo = document.querySelector(hash);
-
-    //   if (scrollTo) {
-    //     const x = scrollTo.scrollHeight + scrollTo.clientHeight;
-
-    //     window.scrollTo({
-    //       top: x,
-    //       behavior: "smooth",
-    //     });
-    //   }
-    // }
     if (hash) {
       const scrollTo: HTMLElement | null = document.querySelector(hash);
 
@@ -75,7 +51,7 @@ const MainPage = () => {
       <LabsVariable id={4} img={labs4} title='title' text='text' />
       <Microphone />
       <LabsVariable id={5} img={labs5} title='title' text='text' />
-      <PhotoPage single={true} />
+      <PhotoPage />
       <LabsVariable id={6} img={labs6} title='title' text='text' />
       <Questionnaire link='https://google.com' text='Google' />
     </>

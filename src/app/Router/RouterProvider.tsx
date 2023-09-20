@@ -16,7 +16,6 @@ const DnaPage = lazy(() => import("@/pages/DnaPage"));
 const TestPage = lazy(() => import("@/widgets/TestPage"));
 const MicResultPage = lazy(() => import("@/pages/MicResultPage"));
 const TestResultPage = lazy(() => import("@/pages/TestResultPage"));
-const PhotoPage = lazy(() => import("@/pages/PhotoPage"));
 
 export const RouterProvider = () => {
   return (
@@ -61,14 +60,6 @@ export const RouterProvider = () => {
           element={
             <Suspense fallback={<Preloader />}>
               <MicResultPage />
-            </Suspense>
-          }
-        />
-        <Route
-          path='/photo/:id'
-          element={
-            <Suspense fallback={<Preloader />}>
-              <PhotoPage />
             </Suspense>
           }
         />

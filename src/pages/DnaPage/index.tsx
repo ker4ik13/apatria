@@ -50,12 +50,9 @@ const DnaPage = () => {
         <Close color='white' to='/#labs' />
       </div>
       <div className={styles.content}>
-        <canvas
-          className={styles.diagram}
-          width={300}
-          height={300}
-          ref={diagram}
-        ></canvas>
+        <div className={styles.diagram}>
+          <canvas ref={diagram}></canvas>
+        </div>
         <div className={styles.results}>
           <h2 className={styles.title}>Ваш DNA</h2>
           <p className={styles.text1}>
