@@ -125,9 +125,10 @@
     margin-top: 10px;
 }
 .indicator {
+    max-width: 10px;
     width: 10px;
-    aspect-ratio: 1/1;
     border-radius: 50px;
+    aspect-ratio: 1/1;
     background-color: $blue;
     border: none;
     outline: none;
