@@ -18,6 +18,7 @@ import { useEffect } from "react";
 
 const MainPage = () => {
   const { hash } = useLocation();
+  console.log(hash);
 
   useEffect(() => {
     // if (hash === "#labs") {
@@ -31,14 +32,24 @@ const MainPage = () => {
     //       behavior: "smooth",
     //     });
     //   }
+    // if (hash) {
+    //   const scrollTo = document.querySelector(hash);
+
+    //   if (scrollTo) {
+    //     const x = scrollTo.scrollHeight + scrollTo.clientHeight;
+
+    //     window.scrollTo({
+    //       top: x,
+    //       behavior: "smooth",
+    //     });
+    //   }
+    // }
     if (hash) {
-      const scrollTo = document.querySelector(hash);
+      const scrollTo: HTMLElement | null = document.querySelector(hash);
 
       if (scrollTo) {
-        const x = scrollTo.scrollHeight + scrollTo.clientHeight;
-
         window.scrollTo({
-          top: x,
+          top: scrollTo.offsetTop,
           behavior: "smooth",
         });
       }
