@@ -20,18 +20,18 @@ const MainPage = () => {
   const { hash } = useLocation();
 
   useEffect(() => {
-    if (hash === "#labs") {
-      const scrollTo = document.querySelector("#labs");
+    // if (hash === "#labs") {
+    //   const scrollTo = document.querySelector("#labs");
 
-      if (scrollTo) {
-        const x = scrollTo.scrollHeight + window.innerHeight * 2;
+    //   if (scrollTo) {
+    //     const x = scrollTo.scrollHeight + window.innerHeight * 2;
 
-        window.scrollTo({
-          top: x,
-          behavior: "smooth",
-        });
-      }
-    } else if (hash) {
+    //     window.scrollTo({
+    //       top: x,
+    //       behavior: "smooth",
+    //     });
+    //   }
+    if (hash) {
       const scrollTo = document.querySelector(hash);
 
       if (scrollTo) {

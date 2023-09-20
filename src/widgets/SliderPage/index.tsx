@@ -9,6 +9,7 @@ import slider6Img from "@/images/slider/slider6.jpg";
 import Close from "@/shared/ui/Close/Close";
 import { useRef } from "react";
 import { handleScroll } from "./handleScroll";
+import { handleIndicators } from "./handleIndicators";
 
 const allSliderImg: string[] = [
   slider1Img,
@@ -23,28 +24,6 @@ const Slider = () => {
   const items = useRef<HTMLDivElement>(null);
   const indicators = useRef<HTMLDivElement>(null);
 
-  const handleSlider = (index: number) => {
-    if (items.current && indicators.current) {
-      const allItems = items.current.children;
-
-      const allArray: ChildNode[] = [];
-      indicators.current.childNodes.forEach((item) => {
-        allArray.push(item);
-      });
-
-      const elems = Array.prototype.slice.call(allArray);
-
-      elems.map((item) => {
-        item.classList.remove(styles.active);
-      });
-      indicators.current.children[index].classList.add(styles.active);
-
-      items.current.scrollTo({
-        left: allItems[index].scrollWidth * index + 30 * index,
-        behavior: "smooth",
-      });
-    }
-  };
   return (
     <div className={styles.sliderPage}>
       <img src={sliderBg} className={styles.bg} />
@@ -104,7 +83,9 @@ const Slider = () => {
                     : styles.indicator
                 }
                 key={index}
-                onClick={() => handleSlider(index)}
+                onClick={() =>
+                  handleIndicators({ index, indicators, items, styles })
+                }
               ></button>
             ))}
           </div>
