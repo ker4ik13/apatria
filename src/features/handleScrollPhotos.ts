@@ -18,7 +18,7 @@ export const handleScrollPhotos = (items: React.RefObject<HTMLDivElement>, indic
       indicators.current.childNodes.forEach((item) => {
         allIndicators.push(item);
       });
-      const indicatorsElems: HTMLButtonElement[] =
+      const indicatorsElems: HTMLDivElement[] =
         Array.prototype.slice.call(allIndicators);
 
       indicatorsElems.forEach((indicator) => {

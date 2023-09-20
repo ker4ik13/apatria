@@ -75,8 +75,7 @@ const Slider = () => {
           </div>
           <div className={styles.indicators} ref={indicators}>
             {allSliderImg.map((_, index) => (
-              <button
-                type='button'
+              <div
                 className={
                   index === 0
                     ? `${styles.indicator} ${styles.active}`
@@ -86,7 +85,7 @@ const Slider = () => {
                 onClick={() =>
                   handleIndicators({ index, indicators, items, styles })
                 }
-              ></button>
+              ></div>
             ))}
           </div>
         </div>

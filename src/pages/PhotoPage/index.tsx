@@ -28,8 +28,7 @@ const PhotoPage = () => {
       </div>
       <div className={styles.indicators} ref={indicators}>
         {ninjaPhotos.map((_, index) => (
-          <button
-            type='button'
+          <div
             className={
               index === 0
                 ? `${styles.indicator} ${styles.active}`
@@ -39,7 +38,7 @@ const PhotoPage = () => {
             onClick={() =>
               handleIndicators({ index, indicators, items, styles })
             }
-          ></button>
+          ></div>
         ))}
       </div>
     </div>
