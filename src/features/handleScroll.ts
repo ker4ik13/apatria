@@ -1,12 +1,10 @@
-export const handleScroll = (items: React.RefObject<HTMLDivElement>, indicators: React.RefObject<HTMLDivElement>, styles: CSSModuleClasses) => {
+export const handleScroll = (items: React.RefObject<HTMLDivElement>, indicators: React.RefObject<HTMLDivElement>, styles: CSSModuleClasses, gap: number) => {
     if (items.current && indicators.current) {
-      // Общий скролл
-      const itemsScrollWidth = items.current.scrollWidth;
 
       // Cкролл сейчас
       const nowScroll = items.current.scrollLeft;
 
-      // Все скролл элементы
+      // Все элементы слайдера
       const allArray: ChildNode[] = [];
       items.current.childNodes.forEach((item) => {
         allArray.push(item);
@@ -21,49 +19,36 @@ export const handleScroll = (items: React.RefObject<HTMLDivElement>, indicators:
       const indicatorsElems: HTMLDivElement[] =
         Array.prototype.slice.call(allIndicators);
 
-      indicatorsElems.forEach((indicator) => {
-        indicator.classList.remove(styles.active);
-      });
+      // Длина всех элементов слайдера
+      const allWidth: number[] = [];
+      
+      const elemsLength = elems.length;
 
-      // Ширина всех элементов
-    //   const elem6Width = itemsScrollWidth - elems[5].scrollWidth - 150;
-      const elem5Width = itemsScrollWidth - elems[4].scrollWidth - 120;
-      const elem4Width =
-        itemsScrollWidth - elems[4].scrollWidth - elems[5].scrollWidth - 90;
-      const elem3Width =
-        itemsScrollWidth -
-        elems[3].scrollWidth -
-        elems[4].scrollWidth -
-        elems[5].scrollWidth -
-        60;
-      const elem2Width =
-        itemsScrollWidth -
-        elems[2].scrollWidth -
-        elems[3].scrollWidth -
-        elems[4].scrollWidth -
-        elems[5].scrollWidth -
-        90;
-      const elem1Width =
-        itemsScrollWidth -
-        elems[1].scrollWidth -
-        elems[2].scrollWidth -
-        elems[3].scrollWidth -
-        elems[4].scrollWidth -
-        elems[5].scrollWidth -
-        120;
-
-      if (nowScroll >= elem5Width) {
-        indicatorsElems[5].classList.add(styles.active);
-      } else if (nowScroll >= elem4Width) {
-        indicatorsElems[4].classList.add(styles.active);
-      } else if (nowScroll >= elem3Width) {
-        indicatorsElems[3].classList.add(styles.active);
-      } else if (nowScroll >= elem2Width) {
-        indicatorsElems[2].classList.add(styles.active);
-      } else if (nowScroll >= elem1Width) {
-        indicatorsElems[1].classList.add(styles.active);
-      } else if (nowScroll <= elem1Width) {
-        indicatorsElems[0].classList.add(styles.active);
+      for(let i = 0; i < elemsLength; i++){
+        if(allWidth[i - 1]){
+          const thisItemWidth = allWidth[i - 1] + elems[i].scrollWidth + gap;
+          allWidth.push(thisItemWidth);
+        } else {
+          const thisItemWidth = elems[i].scrollWidth;
+          allWidth.push(thisItemWidth);
+        }
       }
+
+      // Проверка на активный элемент
+      allWidth.forEach((_, index) => {
+        if(nowScroll >= allWidth[index]){
+          indicatorsElems.forEach((indicator) => {
+            indicator.classList.remove(styles.active);
+          });
+          
+          indicatorsElems[index + 1].classList.add(styles.active);
+        } else if (nowScroll <= allWidth[0]){
+          indicatorsElems.forEach((indicator) => {
+            indicator.classList.remove(styles.active);
+          });
+
+          indicatorsElems[0].classList.add(styles.active);
+        }
+      })
     }
   };

@@ -2,7 +2,7 @@ import styles from "./PhotoPage.module.scss";
 import { ninjaPhotos } from "@/data/photos";
 import { useRef } from "react";
 import { handleIndicators } from "@/features/handleIndicators";
-import { handleScrollPhotos } from "@/features/handleScrollPhotos";
+import { handleScroll } from "@/features/handleScroll";
 
 const PhotoPage = () => {
   const items = useRef<HTMLDivElement>(null);
@@ -14,7 +14,7 @@ const PhotoPage = () => {
         <div
           className={styles.items}
           ref={items}
-          onScroll={() => handleScrollPhotos(items, indicators, styles)}
+          onScroll={() => handleScroll(items, indicators, styles, 30)}
         >
           {ninjaPhotos.map((item, index) => (
             <div className={styles.sliderItem} key={index}>
