@@ -14,7 +14,7 @@ const PhotoPage = () => {
         <div
           className={styles.items}
           ref={items}
-          onScroll={() => handleScroll(items, indicators, styles, 30)}
+          onScroll={() => handleScroll(items, indicators, styles)}
         >
           {ninjaPhotos.map((item, index) => (
             <div className={styles.sliderItem} key={index}>

@@ -34,7 +34,7 @@ const Slider = () => {
           <div
             className={styles.items}
             ref={items}
-            onScroll={() => handleScroll(items, indicators, styles, 30)}
+            onScroll={() => handleScroll(items, indicators, styles)}
           >
             {allSliderImg.map((item, index) => (
               <div
