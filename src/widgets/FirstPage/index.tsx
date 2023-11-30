@@ -1,13 +1,16 @@
 import styles from "./FirstPage.module.scss";
-import logo from "@/images/logo.png";
+import logo from "@/images/logo.jpeg";
 
 const FirstPage = () => {
   return (
     <div className={styles.firstPage}>
       <div className={styles.logo}>
         <img src={logo} alt='Logo' className={styles.img} />
-        <p className={styles.logoText}>Министерство климата</p>
+        <p className={styles.logoText}>Ministère Du Climat</p>
       </div>
+      <p className={styles.centerText}>
+        Bienvenue au Centre du Tri d’Immigration mondial
+      </p>
       <div className={styles.videoFrame}>
         <iframe
           width='560'

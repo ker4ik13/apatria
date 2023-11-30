@@ -21,18 +21,34 @@ const TestPage = () => {
 
         {+id === 9 && (
           <>
-            <WhiteLink text={test.variant1} to={"/predresult/"} />
-            <WhiteLink text={test.variant2} to={"/predresult/"} />
-            <WhiteLink text={test.variant3} to={"/predresult/"} />
-            <WhiteLink text={test.variant4} to={"/predresult/"} />
+            <WhiteLink isUpperCase text={test.variant1} to={"/predresult/"} />
+            <WhiteLink isUpperCase text={test.variant2} to={"/predresult/"} />
+            <WhiteLink isUpperCase text={test.variant3} to={"/predresult/"} />
+            <WhiteLink isUpperCase text={test.variant4} to={"/predresult/"} />
           </>
         )}
         {+id !== 9 && (
           <>
-            <WhiteLink text={test.variant1} to={`/test/${+id + 1}`} />
-            <WhiteLink text={test.variant2} to={`/test/${+id + 1}`} />
-            <WhiteLink text={test.variant3} to={`/test/${+id + 1}`} />
-            <WhiteLink text={test.variant4} to={`/test/${+id + 1}`} />
+            <WhiteLink
+              isUpperCase
+              text={test.variant1}
+              to={`/test/${+id + 1}`}
+            />
+            <WhiteLink
+              isUpperCase
+              text={test.variant2}
+              to={`/test/${+id + 1}`}
+            />
+            <WhiteLink
+              isUpperCase
+              text={test.variant3}
+              to={`/test/${+id + 1}`}
+            />
+            <WhiteLink
+              isUpperCase
+              text={test.variant4}
+              to={`/test/${+id + 1}`}
+            />
           </>
         )}
       </div>

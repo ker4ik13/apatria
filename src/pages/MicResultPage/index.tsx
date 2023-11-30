@@ -4,7 +4,7 @@ import BlueTitle from "@/shared/ui/BlueTitle";
 import slidersIcon from "@/images/icons/sliders.svg";
 import { generateArrays } from "@/features/generateRandomPercentage";
 
-const fakeInfo = ["hight", "medium", "low"];
+const fakeInfo = ["volume", "de qualité", "du rythme"];
 
 const [valuesArray, percentagesArray] = generateArrays(fakeInfo);
 
@@ -23,7 +23,7 @@ const MicResultPage = () => {
             className={styles.item}
             style={{ width: `calc(150px + (${percentagesArray[0]}px * 3))` }}
           >
-            {percentagesArray[0]} hight
+            {percentagesArray[0]} volume
           </p>
         </div>
         <div className={styles.infoItem}>
@@ -31,7 +31,7 @@ const MicResultPage = () => {
             className={styles.item}
             style={{ width: `calc(150px + (${percentagesArray[1]}px * 3))` }}
           >
-            {percentagesArray[1]} medium
+            {percentagesArray[1]} de qualité
           </p>
         </div>
         <div className={styles.infoItem}>
@@ -39,12 +39,12 @@ const MicResultPage = () => {
             className={styles.item}
             style={{ width: `calc(150px + (${percentagesArray[2]}px * 3))` }}
           >
-            {percentagesArray[2]} low
+            {percentagesArray[2]} du rythme
           </p>
         </div>
       </div>
       <p className={styles.screenshot}>
-        сделайте скриншот! Предъявляйте по требованию!
+        Prenez une capture d'écran ! Présenter à la demande !
       </p>
     </div>
   );

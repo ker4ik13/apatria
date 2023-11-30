@@ -68,7 +68,7 @@ const FingerTest = () => {
   return (
     <>
       <div className={styles.fingerPage}>
-        <h2 className={styles.title}>Приложите и держите</h2>
+        <h2 className={styles.title}>Appuyez et maintenez le doigt</h2>
         <div className={styles.fingerZone}>
           <div className={styles.finger} {...longPress}>
             <div
@@ -102,7 +102,7 @@ const FingerTest = () => {
       </div>
       {fingerTest === fingerStates.completed && (
         <div className={styles.fingerPage} id='eyePage'>
-          <h2 className={styles.title}>Нажмите и смотрите в камеру</h2>
+          <h2 className={styles.title}>Cliquez et regardez dans la caméra</h2>
           <div className={styles.fingerZone}>
             <button type='button' className={styles.button} onClick={handleEye}>
               Start

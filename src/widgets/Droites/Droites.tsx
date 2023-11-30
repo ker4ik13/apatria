@@ -5,11 +5,12 @@ import WhiteLink from "@/shared/ui/WhiteLink";
 const Droites = () => {
   return (
     <div className={styles.droitesPage} id='droites'>
-      <WhiteTitle title='Droites' />
-      <WhiteLink to='/docs/1' text='1. dmsakdjhaskds' />
-      <WhiteLink to='/docs/2' text='2. dmsakdjhaskds' />
-      <WhiteLink to='/docs/3' text='3. dmsakdjhaskds' />
-      <WhiteLink to='/docs/4' text='4. dmsakdjhaskds' />
+      <WhiteTitle title='Décrets' />
+      <WhiteLink to='/docs/1' text='Apatria : définition' />
+      <WhiteLink to='/docs/2' text='Centre du Tri d’Immigration Obligatoire ' />
+      <WhiteLink to='/docs/3' text='Dernier jour du choix' />
+      <WhiteLink to='/docs/4' text='Décret №3456 du 16 avril 2036' />
+      <WhiteLink to='/docs/5' text='Décret No 3457 du 1er mai 2036' />
     </div>
   );
 };

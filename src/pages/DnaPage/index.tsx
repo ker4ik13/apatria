@@ -5,18 +5,32 @@ import { generateArrays } from "@/features/generateRandomPercentage";
 import Close from "@/shared/ui/Close/Close";
 
 const mockNation: string[] = [
-  "Еврей",
-  "Эфиоп",
-  "Татарин",
-  "Абхаз",
-  "Цыган",
-  "Грек",
-  "Талыш",
-  "Поляк",
-  "Эстонец",
-  "Грузин",
-  "Итальянец",
-  "Русский",
+  "Juif",
+  "Ethiopien",
+  "Tatar",
+  "Abkhazes",
+  "de Roms",
+  "Grec",
+  "Letton",
+  "Polonais",
+  "Estonien",
+  "Géorgiens",
+  "Italien",
+  "Russe",
+  "Arménien",
+  "Tchouvache",
+  "Ossètes",
+  "Mexicain",
+  "Yakut",
+  "Albanais",
+  "Daghestan",
+  "Américain",
+  "Africain",
+  "Tadjik",
+  "Irlandais",
+  "Coréen",
+  "de Roumains",
+  "Serbe",
 ];
 const [valuesArray, percentagesArray] = generateArrays(mockNation);
 
@@ -54,7 +68,7 @@ const DnaPage = () => {
           <canvas ref={diagram}></canvas>
         </div>
         <div className={styles.results}>
-          <h2 className={styles.title}>Ваш DNA</h2>
+          <h2 className={styles.title}>Votre ADN:</h2>
           <p className={styles.text1}>
             {percentagesArray[0]}% {valuesArray[0]}
           </p>
@@ -67,7 +81,7 @@ const DnaPage = () => {
         </div>
       </div>
       <p className={styles.screenshot}>
-        сделайте скриншот! Предъявляйте по требованию!
+        Prenez une capture d'écran ! Présenter à la demande!
       </p>
     </div>
   );

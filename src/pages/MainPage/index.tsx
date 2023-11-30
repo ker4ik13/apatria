@@ -42,10 +42,10 @@ const MainPage = () => {
       <LabsVariable
         id={2}
         img={labs2}
-        title='title'
-        text='text'
+        title='Choisissez le bon réponses'
+        text='Description texte Descriptiondescription texte Descriptiondescription texte Descriptiondescription texte descriptiondescription texte Descriptiondescription texte Descriptiondescription texte Descriptiondescription'
         buttonLink='/test/0'
-        buttonText='Пройти тест'
+        buttonText='Commencer le test'
       />
       <LabsVariable id={3} img={labs3} title='title' text='text' />
       <LabsVariable id={4} img={labs4} title='title' text='text' />

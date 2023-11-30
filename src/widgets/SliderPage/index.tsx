@@ -29,7 +29,9 @@ const Slider = () => {
       <img src={sliderBg} className={styles.bg} />
       <div className={styles.content}>
         <h2 className={styles.title}>ZPRs</h2>
-        <p className={styles.description}>зоны распределения</p>
+        <p className={styles.description}>
+          Des zones de repeuplement prioritaire
+        </p>
         <div className={styles.slider}>
           <div
             className={styles.items}

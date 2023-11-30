@@ -22,13 +22,13 @@ const TestResultPage = () => {
       <div className={styles.close}>
         <Close to='/#labs' color='black' />
       </div>
-      <p className={styles.title}>Ваш результат теста!</p>
+      <p className={styles.title}>ВVotre résultat de test:</p>
       <div className={styles.result}>
         <img src={qr} alt='Qr-code' className={styles.qr} draggable={false} />
         <p className={styles.text}>{fakeText[random]}</p>
       </div>
       <p className={styles.screenshot}>
-        сделайте скриншот! Предъявляйте по требованию!
+        Prenez une capture d'écran ! Présenter à la demande !
       </p>
     </div>
   );
