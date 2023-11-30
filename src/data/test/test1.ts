@@ -103,7 +103,7 @@ export const test1: ITest[] = [
     },
     {
         ask: 'Faune question',
-        image: testImg9,
+        image: testImg6,
         title: "Qu'est-ce que c'est ?",
         variant1: 'а. char',
         variant2: "В.casserole",
