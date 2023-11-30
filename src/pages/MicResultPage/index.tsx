@@ -14,7 +14,7 @@ const MicResultPage = () => {
     <div className={styles.micResultPage}>
       <div className={styles.header}>
         <Close color='black' to='/' />
-        <BlueTitle title='Resultat' />
+        <BlueTitle title='Résultat' />
       </div>
       <img src={slidersIcon} className={styles.sliders} />
       <div className={styles.info}>

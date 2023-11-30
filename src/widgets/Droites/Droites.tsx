@@ -5,7 +5,7 @@ import WhiteLink from "@/shared/ui/WhiteLink";
 const Droites = () => {
   return (
     <div className={styles.droitesPage} id='droites'>
-      <WhiteTitle title='Les Lois' />
+      <WhiteTitle title='Les Lois:' />
       <WhiteLink to='/docs/1' text='Apatria : définition' />
       <WhiteLink to='/docs/2' text='Centre du Tri d’Immigration Obligatoire ' />
       <WhiteLink to='/docs/3' text='Dernier jour du choix' />

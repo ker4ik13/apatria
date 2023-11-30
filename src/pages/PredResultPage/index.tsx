@@ -18,7 +18,7 @@ const PredResultPage = ({ link }: IPredResultPage) => {
   }, []);
   return (
     <div className={styles.predResult}>
-      <BlueTitle title='Resultat' />
+      <BlueTitle title='Résultat' />
       <Preloader notFullHeight={true} />
     </div>
   );

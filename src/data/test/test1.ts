@@ -7,6 +7,7 @@ import testImg6 from '@/images/test/6.png';
 import testImg7 from '@/images/test/7.png';
 import testImg8 from '@/images/test/8.png';
 import testImg9 from '@/images/test/9.png';
+import testImg10 from '@/images/test/10.png';
 
 export interface ITest {
     title: string;
@@ -39,7 +40,7 @@ export const test1: ITest[] = [
     },
     {
         ask: 'Faune question',
-        image: testImg8,
+        image: testImg9,
         title: "Qu'est-ce que c'est ?",
         variant1: 'A. gâteau',
         variant2: "В. stylo",
@@ -93,7 +94,7 @@ export const test1: ITest[] = [
     },
     {
         ask: "question d'histoire",
-        image: testImg9,
+        image: testImg10,
         title: "Qu'est-ce que c'est ?",
         variant1: 'а. noix',
         variant2: "В. violon",
@@ -102,7 +103,7 @@ export const test1: ITest[] = [
     },
     {
         ask: 'Faune question',
-        image: testImg6,
+        image: testImg9,
         title: "Qu'est-ce que c'est ?",
         variant1: 'а. char',
         variant2: "В.casserole",

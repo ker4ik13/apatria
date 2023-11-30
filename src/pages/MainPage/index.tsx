@@ -53,7 +53,10 @@ const MainPage = () => {
       <PhotoPage />
       <LabsVariable id={6} img={labs6} title='title' text='text' />
       <Droites />
-      <Questionnaire link='https://google.com' text='Google' />
+      <Questionnaire
+        link='https://docs.google.com/forms/d/1Rq83PlSift4s3whNw1Yub7uyTY0fnxeMmVP0ftpjHb0/viewform?edit_requested=true'
+        text='Questionnaire'
+      />
     </>
   );
 };

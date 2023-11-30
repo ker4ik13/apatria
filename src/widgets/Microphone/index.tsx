@@ -93,7 +93,7 @@ const Microphone = () => {
           navigate("/mic-result");
         }}
       >
-        Resultat
+        Résultat
       </button>
     </div>
   );
