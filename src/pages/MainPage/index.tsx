@@ -35,7 +35,6 @@ const MainPage = () => {
     <>
       <FirstPage />
       <Slider />
-      <Droites />
       <Labs />
       <LabsVariable id={1} img={labs1} title='title' text='text' />
       <FingerTest />
@@ -53,6 +52,7 @@ const MainPage = () => {
       <LabsVariable id={5} img={labs5} title='title' text='text' />
       <PhotoPage />
       <LabsVariable id={6} img={labs6} title='title' text='text' />
+      <Droites />
       <Questionnaire link='https://google.com' text='Google' />
     </>
   );

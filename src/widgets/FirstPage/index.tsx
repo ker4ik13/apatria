@@ -1,5 +1,5 @@
 import styles from "./FirstPage.module.scss";
-import logo from "@/images/logo.jpeg";
+import logo from "@/images/logo.png";
 
 const FirstPage = () => {
   return (

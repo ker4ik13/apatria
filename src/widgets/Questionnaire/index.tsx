@@ -10,7 +10,7 @@ interface IQuestionnaireProps {
 const Questionnaire = ({ text, link }: IQuestionnaireProps) => {
   return (
     <div className={styles.questionnaire}>
-      <WhiteTitle title='Anketa' />
+      <WhiteTitle title='Questionnaire' />
       <WhiteLink text={text} to={link} />
     </div>
   );

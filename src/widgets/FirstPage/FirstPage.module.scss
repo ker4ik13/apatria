@@ -13,6 +13,8 @@
 }
 .logo {
   position: relative;
+  max-width: 300px;
+  width: 100%;
 }
 .img {
   width: 100%;
@@ -20,12 +22,13 @@
 .logoText {
   position: absolute;
   left: 50%;
-  bottom: 0;
+  bottom: 40px;
   transform: translate(-50%, 0);
-  color: $blue;
+  color: #fff;
   text-align: center;
   text-transform: uppercase;
-  font-size: $button-big;
+  font-size: $button-mini;
+  width: 100%;
 }
 .centerText {
   color: $blue;
@@ -58,14 +61,15 @@ iframe {
   height: auto;
   aspect-ratio: 16/9;
 }
-@media (max-width: $mobile) {
-  .logoText {
-    font-size: $button-small;
-  }
-}
+
 @media (max-width: $small) {
   .logoText {
     max-width: 150px;
     font-size: $button-mini;
+  }
+}
+@media (max-width: 340px) {
+  .logoText {
+    bottom: 30px;
   }
 }
