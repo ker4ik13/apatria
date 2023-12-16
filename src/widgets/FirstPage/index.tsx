@@ -9,7 +9,7 @@ const FirstPage = () => {
         <p className={styles.logoText}>Ministère Du Climat</p>
       </div>
       <p className={styles.centerText}>
-        Bienvenue au Centre du Tri d’Immigration mondial
+        Bienvenue au Centre de Tri de la Migration Mondiale
       </p>
       <div className={styles.videoFrame}>
         <iframe
