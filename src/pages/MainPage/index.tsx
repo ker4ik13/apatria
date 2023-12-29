@@ -46,13 +46,18 @@ const MainPage = () => {
 				buttonLink='/test/0'
 				buttonText='Commencer le test'
 			/>
-			<LabsVariable id={3} img={labs3} title='title' text='text' />
+			<LabsVariable
+				id={3}
+				img={labs3}
+				title='title'
+				text='text'
+				buttonLink='/test2/0'
+				buttonText='Commencer le test'
+			/>
 			<LabsVariable
 				id={4}
 				img={labs4}
 				text="Chantez dans le micro une berceuse de votre enfance. Attendez le résultat qui détermineral'origine de cette berceuse."
-				buttonLink='/test2/0'
-				buttonText='Commencer le test'
 			/>
 			<Microphone />
 			<LabsVariable id={5} img={labs5} title='title' text='text' />

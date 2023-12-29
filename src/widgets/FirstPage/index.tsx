@@ -1,29 +1,22 @@
-import styles from "./FirstPage.module.scss";
-import logo from "@/images/logo.png";
+import video from '@/data/video.mp4';
+import logo from '@/images/logo.png';
+import styles from './FirstPage.module.scss';
 
 const FirstPage = () => {
-  return (
-    <div className={styles.firstPage}>
-      <div className={styles.logo}>
-        <img src={logo} alt='Logo' className={styles.img} />
-        <p className={styles.logoText}>Ministère Du Climat</p>
-      </div>
-      <p className={styles.centerText}>
-        Bienvenue au Centre de Tri de la Migration Mondiale
-      </p>
-      <div className={styles.videoFrame}>
-        <iframe
-          width='560'
-          height='315'
-          src='https://www.youtube.com/embed/dQw4w9WgXcQ?si=jFDlF8pviG0Bk4nq'
-          frameBorder={0}
-          title='YouTube video player'
-          allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
-          allowFullScreen={true}
-        ></iframe>
-      </div>
-    </div>
-  );
+	return (
+		<div className={styles.firstPage}>
+			<div className={styles.logo}>
+				<img src={logo} alt='Logo' className={styles.img} />
+				<p className={styles.logoText}>Ministère Du Climat</p>
+			</div>
+			<p className={styles.centerText}>
+				Bienvenue au Centre de Tri de la Migration Mondiale
+			</p>
+			<div className={styles.videoFrame}>
+				<video src={video} controls></video>
+			</div>
+		</div>
+	);
 };
 
 export default FirstPage;
