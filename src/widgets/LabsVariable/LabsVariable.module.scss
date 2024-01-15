@@ -1,56 +1,57 @@
 @import '@/shared/styles/_vars';
 
 .labsVariable {
-    @include container();
-    padding-top: 50px;
-    background-color: $pink;
+	@include container();
+	padding-top: 50px;
+	background-color: $pink;
+	padding-bottom: 30px;
 }
 
 .header {
-    background-color: $yellow;
-    border-radius: 16px;
-    position: relative;
-    height: 100%;
-    width: 100%;
+	background-color: $yellow;
+	border-radius: 16px;
+	position: relative;
+	height: 100%;
+	width: 100%;
 }
 
 .img {
-    position: relative;
-    z-index: 2;
-    bottom: 8px;
-    left: 8px;
-    width: 100%;
-    padding: 10px;
-    border-radius: 16px;
-    background-color: $blue;
+	position: relative;
+	z-index: 2;
+	bottom: 8px;
+	left: 8px;
+	width: 100%;
+	padding: 10px;
+	border-radius: 16px;
+	background-color: $blue;
 }
 
 .content {
-    margin-top: 30px;
-    font-size: $text-big;
-    color: $blue;
-    text-transform: uppercase;
-    padding: 0 10px;
+	margin-top: 30px;
+	font-size: $text-big;
+	color: $blue;
+	text-transform: uppercase;
+	padding: 0 10px;
 }
 
 .title {
-    cursor: text;
-    text-align: center;
+	cursor: text;
+	text-align: center;
 }
 
 .text {
-    margin-top: 16px;
-    cursor: text;
+	margin-top: 16px;
+	cursor: text;
 }
 
 @media (max-width: $mobile) {
-    .content {
-        font-size: $text-small;
-    }
-    .title {
-        font-size: $title-small;
-    }
-    .text {
-        font-size: $text-small;
-    }
+	.content {
+		font-size: $text-small;
+	}
+	.title {
+		font-size: $title-small;
+	}
+	.text {
+		font-size: $text-small;
+	}
 }

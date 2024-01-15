@@ -42,15 +42,25 @@ const MainPage = () => {
 				id={2}
 				img={labs2}
 				title='Choisissez le bon réponses'
-				text='Description texte Descriptiondescription texte Descriptiondescription texte Descriptiondescription texte descriptiondescription texte Descriptiondescription texte Descriptiondescription texte Descriptiondescription'
+				text="Afin d'évaluer votre niveau de connaissance de la langue française ainsi que votre culture générale globale, nous vous demandons de bien vouloir effectuer ce test sans l'aide d'une tierce personne"
 				buttonLink='/test/0'
 				buttonText='Commencer le test'
 			/>
 			<LabsVariable
 				id={3}
 				img={labs3}
-				title='title'
-				text='text'
+				text={
+					<>
+						<p>
+							La religion qui vous sera attribuée suite au résultat de ce test
+							sera déterminante pour votre avenir.
+						</p>
+						<p>
+							Si besoin est, vous devrez passer par la case conversion
+							totalement prise en charge par nos services.'
+						</p>
+					</>
+				}
 				buttonLink='/test2/0'
 				buttonText='Commencer le test'
 			/>
@@ -60,9 +70,45 @@ const MainPage = () => {
 				text="Chantez dans le micro une berceuse de votre enfance. Attendez le résultat qui détermineral'origine de cette berceuse."
 			/>
 			<Microphone />
-			<LabsVariable id={5} img={labs5} title='title' text='text' />
+			<LabsVariable
+				id={5}
+				img={labs5}
+				title='title'
+				text={
+					<>
+						<p>
+							Reproduisez le mouvement que vous voyez , image par image tout en
+							répétant les phrases de survie dans toutes les langues que vous
+							connaissez ou parvenez à lire ( on met en plusieurs langues
+							peut-être là)?
+						</p>
+						<p>
+							Appliquez vous, leur réalisation doit être parfaite . Le cas
+							échéant, l'étape survie ne sera pas validée.
+						</p>
+					</>
+				}
+			/>
 			<PhotoPage />
-			<LabsVariable id={6} img={labs6} title='title' text='text' />
+			<LabsVariable
+				id={6}
+				img={labs6}
+				text={
+					<>
+						<p>
+							Évaluez avec nous , pas à pas votre patrimoine personnel ainsi que
+							celui de votre conjoint.
+						</p>
+						<p>
+							Selon le choix que vous ferez de suivre ou non votre partenaire en
+							zone ZRP, il vous sera demandé de rendre une partie ou la totalité
+							de vos biens à l’État de Droit Autochtone et si nécessaire un
+							divorce express peut être mis en place par nos agents pour des
+							raisons de non partage de patrimoine
+						</p>
+					</>
+				}
+			/>
 			<Droites />
 			<Questionnaire
 				link='https://docs.google.com/forms/d/1Rq83PlSift4s3whNw1Yub7uyTY0fnxeMmVP0ftpjHb0/viewform?edit_requested=true'
