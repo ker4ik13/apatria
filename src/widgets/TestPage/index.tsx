@@ -5,13 +5,15 @@ import BlueTitle from '@/shared/ui/BlueTitle';
 import WhiteButton from '@/shared/ui/WhiteButton';
 import WhiteTitle from '@/shared/ui/WhiteTitle/WhiteTitle';
 import { useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import useSound from 'use-sound';
 import styles from './TestPage.module.scss';
 
 const TestPage = () => {
 	const [playCorrect] = useSound(correctSound);
 	const [playError] = useSound(errorSound);
+
+	const navigate = useNavigate();
 
 	const [isAnswered, setIsAnswered] = useState(false);
 
@@ -51,16 +53,24 @@ const TestPage = () => {
 								playCorrect();
 								setTimeout(() => {
 									+id === 9
-										? (window.location.href = '/predresult/')
-										: (window.location.href = `/test/${+id + 1}`);
+										? navigate('/predresult/', {
+												state: setIsAnswered(false),
+										  })
+										: navigate(`/test/${+id + 1}`, {
+												state: setIsAnswered(false),
+										  });
 								}, 1500);
 							} else {
 								event.currentTarget.classList.add(styles.errorColor);
 								playError();
 								setTimeout(() => {
 									+id === 9
-										? (window.location.href = '/predresult/')
-										: (window.location.href = `/test/${+id + 1}`);
+										? navigate('/predresult/', {
+												state: setIsAnswered(false),
+										  })
+										: navigate(`/test/${+id + 1}`, {
+												state: setIsAnswered(false),
+										  });
 								}, 3000);
 							}
 						}}
