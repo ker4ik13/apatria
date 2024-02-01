@@ -1,3 +1,4 @@
+/* eslint-disable no-mixed-spaces-and-tabs */
 import correctSound from '@/data/sounds/correct.mp3';
 import errorSound from '@/data/sounds/error.mp3';
 import { ITest, test1 } from '@/data/test/test1';

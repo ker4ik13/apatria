@@ -1,10 +1,10 @@
 import { handleIndicators } from '@/features/handleIndicators';
 import { handleScroll } from '@/features/handleScroll';
-import slider1Img from '@/images/slider/slider1.jpg';
+import slider1Img from '@/images/slider/slider1.png';
 import slider2Img from '@/images/slider/slider2.jpg';
-import slider3Img from '@/images/slider/slider3.jpg';
+import slider3Img from '@/images/slider/slider3.png';
 import slider4Img from '@/images/slider/slider4.jpg';
-import slider5Img from '@/images/slider/slider5.jpg';
+import slider5Img from '@/images/slider/slider5.png';
 import slider6Img from '@/images/slider/slider6.jpg';
 import sliderBg from '@/images/slider/sliderBg.jpg';
 import Close from '@/shared/ui/Close/Close';
@@ -227,7 +227,7 @@ const Slider = () => {
 									draggable={false}
 								/>
 								<div className={styles.contentText}>
-									<p className={styles.text}>{item.text}</p>
+									<div className={styles.text}>{item.text}</div>
 								</div>
 							</div>
 						))}

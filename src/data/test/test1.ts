@@ -2,7 +2,7 @@ import testImg1 from '@/images/test/1.png';
 import testImg10 from '@/images/test/10.png';
 import testImg2 from '@/images/test/2.png';
 import testImg3 from '@/images/test/3.png';
-import testImg4 from '@/images/test/4.png';
+import testImg4 from '@/images/test/4.jpg';
 import testImg5 from '@/images/test/5.png';
 import testImg6 from '@/images/test/6.png';
 import testImg7 from '@/images/test/7.png';

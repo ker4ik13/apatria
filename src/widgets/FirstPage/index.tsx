@@ -7,7 +7,6 @@ const FirstPage = () => {
 		<div className={styles.firstPage}>
 			<div className={styles.logo}>
 				<img src={logo} alt='Logo' className={styles.img} />
-				<p className={styles.logoText}>Ministère Du Climat</p>
 			</div>
 			<p className={styles.centerText}>
 				Bienvenue au Centre de Tri de la Migration Mondiale
