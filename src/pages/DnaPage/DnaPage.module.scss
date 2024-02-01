@@ -1,65 +1,77 @@
 @import '@/shared/styles/_vars';
 
 .dnaPage {
-    @include container();
-    background-color: $red;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+	@include container();
+	background-color: $red;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
 }
 
 .header {
-    display: flex;
-    width: 100%;
-    align-items: center;
-    justify-content: flex-end;
+	display: flex;
+	width: 100%;
+	align-items: center;
+	justify-content: flex-end;
 }
 
 .content {
-    margin-top: 20px;
-    background-color: $yellow;
-    width: 100%;
-    border-radius: 8px;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
+	margin-top: 20px;
+	background-color: $yellow;
+	width: 100%;
+	border-radius: 8px;
+	padding: 20px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-start;
 }
 .diagram {
-    max-width: 100%;
-    width: 80%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+	max-width: 100%;
+	width: 80%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 .results {
-    text-align: center;
+	text-align: center;
 }
 
 .title {
-    font-size: $text-big;
-    color: $blue;
-    margin-bottom: 20px;
+	font-size: $text-big;
+	color: $blue;
+	margin-bottom: 20px;
 }
 
 .text1 {
-    font-size: $button-big;
-    color: $light-red;
+	font-size: $button-big;
+	color: $light-red;
 }
 .text2 {
-    font-size: $button-big;
-    color: $light-blue;
+	font-size: $button-big;
+	color: $light-blue;
 }
 .text3 {
-    font-size: $button-big;
-    color: $green;
+	font-size: $button-big;
+	color: $green;
 }
 
 .screenshot {
-    color: #fff;
-    text-align: center;
-    max-width: 200px;
-    margin: 20px auto 0;
+	color: #fff;
+	text-align: center;
+	max-width: 200px;
+	margin: 20px auto 0;
+}
+
+.error {
+	width: 80%;
+	aspect-ratio: 1/1;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: $red;
+	z-index: 1000;
+	font-size: 6rem;
+	border-radius: 100px;
 }

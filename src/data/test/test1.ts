@@ -13,101 +13,241 @@ export interface ITest {
 	title: string;
 	image?: string;
 	ask: string;
-	variant1: string;
-	variant2: string;
-	variant3: string;
-	variant4: string;
+	variants: {
+		label: string;
+		isCorrect: boolean;
+	}[];
 }
 
 export const test1: ITest[] = [
 	{
-		ask: 'Question gastronomique',
+		ask: 'Question Civilisation',
 		image: testImg5,
 		title: "Qu'est-ce que c'est ?",
-		variant1: 'Courgettes',
-		variant2: 'Haricots Verts',
-		variant3: 'Avocat',
-		variant4: 'Citrouille',
+		variants: [
+			{
+				label: 'Un croissant au beurre',
+				isCorrect: true,
+			},
+			{
+				label: 'Un croissant aux amandes',
+				isCorrect: false,
+			},
+			{
+				label: 'Une chocolatine',
+				isCorrect: false,
+			},
+			{
+				label: 'Un croissant sans gluten',
+				isCorrect: false,
+			},
+		],
 	},
 	{
-		ask: 'Question architectural',
+		ask: 'Question Patrimoine',
 		image: testImg7,
 		title: "Qu'est-ce que c'est ?",
-		variant1: 'Viande',
-		variant2: 'Hérisson',
-		variant3: 'Chaise',
-		variant4: 'château',
+		variants: [
+			{
+				label: 'La lettre A de l’alphabet latin avant 2031',
+				isCorrect: false,
+			},
+			{
+				label: 'Une grue de 1980',
+				isCorrect: false,
+			},
+			{
+				label: 'Une antenne radio de 1990',
+				isCorrect: false,
+			},
+			{
+				label: 'La tour Eiffel avant 2030',
+				isCorrect: true,
+			},
+		],
 	},
 	{
-		ask: 'Faune question',
+		ask: 'Question Sciences de la Vie et de la Terre',
 		image: testImg9,
 		title: "Qu'est-ce que c'est ?",
-		variant1: 'gâteau',
-		variant2: 'stylo',
-		variant3: 'seau',
-		variant4: 'poisson',
+		variants: [
+			{
+				label: 'Un crapaud',
+				isCorrect: false,
+			},
+			{
+				label: 'Un lapin vert',
+				isCorrect: false,
+			},
+			{
+				label: 'Une grenouille',
+				isCorrect: true,
+			},
+			{
+				label: 'Une rainette',
+				isCorrect: false,
+			},
+		],
 	},
 	{
-		ask: "question d'histoire",
+		ask: 'Question Histoire de l’Art',
 		image: testImg4,
 		title: "Qu'est-ce que c'est ?",
-		variant1: 'chat',
-		variant2: 'Téléphone',
-		variant3: 'fenêtre',
-		variant4: 'microphone',
+		variants: [
+			{
+				label: 'La schtroumpfette',
+				isCorrect: false,
+			},
+			{
+				label: 'Catherine Deneuve',
+				isCorrect: false,
+			},
+			{
+				label: 'Brigitte Bardot',
+				isCorrect: false,
+			},
+			{
+				label: 'Marianne',
+				isCorrect: true,
+			},
+		],
 	},
 	{
-		ask: 'Question gastronomique',
+		ask: 'Question Géographie appliquée',
 		image: testImg1,
 		title: "Qu'est-ce que c'est ?",
-		variant1: 'chat',
-		variant2: 'Téléphone',
-		variant3: 'fenêtre',
-		variant4: 'microphone',
+		variants: [
+			{
+				label: 'Beaujolais nouveau année 2036',
+				isCorrect: false,
+			},
+			{
+				label: 'Bordeaux année 2030',
+				isCorrect: false,
+			},
+			{
+				label: 'Château neuf du pape année 2026',
+				isCorrect: false,
+			},
+			{
+				label: 'Côte du Rhône de Wallonie année 2035',
+				isCorrect: true,
+			},
+		],
 	},
 	{
-		ask: 'Question de parfum',
+		ask: 'Question Mode et parfum',
 		image: testImg2,
 		title: "Qu'est-ce que c'est ?",
-		variant1: 'canapé',
-		variant2: 'arbre de Noël',
-		variant3: 'voiture',
-		variant4: 'boutique',
+		variants: [
+			{
+				label: 'Shanel numéro 5',
+				isCorrect: false,
+			},
+			{
+				label: 'Poison rouge de Dyor',
+				isCorrect: false,
+			},
+			{
+				label: 'Savon de Marseille numéro 19',
+				isCorrect: true,
+			},
+			{
+				label: 'Armania Niente',
+				isCorrect: false,
+			},
+		],
 	},
 	{
-		ask: "question d'amour",
+		ask: 'Question Littérature',
 		image: testImg3,
 		title: "Qu'est-ce que c'est ?",
-		variant1: 'livre',
-		variant2: 'pistolet',
-		variant3: 'roue',
-		variant4: 'porte',
+		variants: [
+			{
+				label: 'Le voleur à plume',
+				isCorrect: false,
+			},
+			{
+				label: 'La « blonde »',
+				isCorrect: false,
+			},
+			{
+				label: 'Le démon',
+				isCorrect: false,
+			},
+			{
+				label: 'Chérubin',
+				isCorrect: true,
+			},
+		],
 	},
 	{
-		ask: 'Question architectural',
+		ask: 'Question Architecture',
 		image: testImg8,
 		title: "Qu'est-ce que c'est ?",
-		variant1: 'lampe',
-		variant2: 'sac',
-		variant3: 'canne à pêche',
-		variant4: 'avion',
+		variants: [
+			{
+				label: 'La porte Saint Martin',
+				isCorrect: false,
+			},
+			{
+				label: 'La porte d’Aix',
+				isCorrect: false,
+			},
+			{
+				label: 'L’arc de triomphe',
+				isCorrect: true,
+			},
+			{
+				label: 'L’arche de la Défense',
+				isCorrect: false,
+			},
+		],
 	},
 	{
-		ask: "question d'histoire",
+		ask: 'Question Mythologie française',
 		image: testImg10,
 		title: "Qu'est-ce que c'est ?",
-		variant1: 'noix',
-		variant2: 'violon',
-		variant3: 'balai',
-		variant4: 'grenouille',
+		variants: [
+			{
+				label: 'Général Bonaparte',
+				isCorrect: true,
+			},
+			{
+				label: 'Empereur Napoléon 1 er',
+				isCorrect: true,
+			},
+			{
+				label: 'Premier consul',
+				isCorrect: true,
+			},
+			{
+				label: 'Président de la République Italienne',
+				isCorrect: true,
+			},
+		],
 	},
 	{
-		ask: 'Faune question',
+		ask: 'Question Gastronomie',
 		image: testImg6,
 		title: "Qu'est-ce que c'est ?",
-		variant1: 'char',
-		variant2: 'casserole',
-		variant3: 'tournevis',
-		variant4: 'champignon',
+		variants: [
+			{
+				label: 'Escargot',
+				isCorrect: false,
+			},
+			{
+				label: 'Limace',
+				isCorrect: false,
+			},
+			{
+				label: 'Tortue',
+				isCorrect: false,
+			},
+			{
+				label: 'Antipasti spéciaux',
+				isCorrect: true,
+			},
+		],
 	},
 ];

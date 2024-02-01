@@ -36,12 +36,28 @@ const MainPage = () => {
 			<FirstPage />
 			<Slider />
 			<Labs />
-			<LabsVariable id={1} img={labs1} title='title' text='text' />
+			<LabsVariable
+				id={1}
+				img={labs1}
+				title='title'
+				text={
+					<>
+						<p>
+							Ce test nouvelle génération déterminera en partie votre
+							destination ZRP.
+						</p>
+						<p>
+							Le test du chaman viendra compléter votre origine dans sa fonction
+							spirituelle.
+						</p>
+					</>
+				}
+			/>
 			<FingerTest />
 			<LabsVariable
 				id={2}
 				img={labs2}
-				title='Choisissez le bon réponses'
+				title='choisissez la bonne réponse'
 				text="Afin d'évaluer votre niveau de connaissance de la langue française ainsi que votre culture générale globale, nous vous demandons de bien vouloir effectuer ce test sans l'aide d'une tierce personne"
 				buttonLink='/test/0'
 				buttonText='Commencer le test'
