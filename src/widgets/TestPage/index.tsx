@@ -1,7 +1,7 @@
 /* eslint-disable no-mixed-spaces-and-tabs */
 import correctSound from '@/data/sounds/correct.mp3';
 import errorSound from '@/data/sounds/error.mp3';
-import { ITest, test1 } from '@/data/test/test1';
+import { ITest } from '@/data/test/test1';
 import BlueTitle from '@/shared/ui/BlueTitle';
 import WhiteButton from '@/shared/ui/WhiteButton';
 import WhiteTitle from '@/shared/ui/WhiteTitle/WhiteTitle';
@@ -10,7 +10,12 @@ import { useNavigate, useParams } from 'react-router-dom';
 import useSound from 'use-sound';
 import styles from './TestPage.module.scss';
 
-const TestPage = () => {
+interface TestPageProps {
+	needTest: ITest[];
+	link: string;
+}
+
+const TestPage = ({ needTest, link }: TestPageProps) => {
 	const [playCorrect] = useSound(correctSound);
 	const [playError] = useSound(errorSound);
 
@@ -20,7 +25,7 @@ const TestPage = () => {
 
 	const { id } = useParams();
 	if (id) {
-		const test: ITest = test1[+id];
+		const test: ITest = needTest[+id];
 		return (
 			<div className={styles.testPage}>
 				<p className={styles.number}>{+id + 1}/10</p>
@@ -28,7 +33,7 @@ const TestPage = () => {
 				<div className={styles.imgWrapper}>
 					<img src={test.image} className={styles.img} />
 				</div>
-				<WhiteTitle title={test.title} />
+				{test.title && <WhiteTitle title={test.title} />}
 				{test.variants.map((variant, index) => (
 					<WhiteButton
 						key={index}
@@ -57,7 +62,7 @@ const TestPage = () => {
 										? navigate('/predresult/', {
 												state: setIsAnswered(false),
 										  })
-										: navigate(`/test/${+id + 1}`, {
+										: navigate(`/${link}/${+id + 1}`, {
 												state: setIsAnswered(false),
 										  });
 								}, 1500);
@@ -69,7 +74,7 @@ const TestPage = () => {
 										? navigate('/predresult/', {
 												state: setIsAnswered(false),
 										  })
-										: navigate(`/test/${+id + 1}`, {
+										: navigate(`/${link}/${+id + 1}`, {
 												state: setIsAnswered(false),
 										  });
 								}, 3000);

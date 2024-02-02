@@ -1,6 +1,8 @@
 import { Suspense, lazy } from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 // Pages
+import { test1 } from '@/data/test/test1';
+import { test2 } from '@/data/test/test2';
 import MainPage from '@/pages/MainPage';
 import PredResultPage from '@/pages/PredResultPage';
 import Preloader from '@/shared/ui/Preloader';
@@ -10,7 +12,6 @@ const DnaPage = lazy(() => import('@/pages/DnaPage'));
 const TestPage = lazy(() => import('@/widgets/TestPage'));
 const MicResultPage = lazy(() => import('@/pages/MicResultPage'));
 const TestResultPage = lazy(() => import('@/pages/TestResultPage'));
-const TestPage2 = lazy(() => import('@/widgets/TestPage2'));
 
 export const RouterProvider = () => {
 	return (
@@ -38,7 +39,7 @@ export const RouterProvider = () => {
 					path='/test/:id'
 					element={
 						<Suspense fallback={<Preloader />}>
-							<TestPage />
+							<TestPage needTest={test1} link='test' />
 						</Suspense>
 					}
 				/>
@@ -46,7 +47,7 @@ export const RouterProvider = () => {
 					path='/test2/:id'
 					element={
 						<Suspense fallback={<Preloader />}>
-							<TestPage2 />
+							<TestPage needTest={test2} link='test2' />
 						</Suspense>
 					}
 				/>

@@ -8,106 +8,268 @@ import image6 from '../test2/image6.png';
 import image7 from '../test2/image7.png';
 import image8 from '../test2/image8.png';
 import image9 from '../test2/image9.png';
+import type { ITest } from './test1';
 
-export interface ITest2 {
-	image?: string;
-	ask: string;
-	variant1: string;
-	variant2: string;
-	variant3: string;
-	variant4: string;
-	variant5: string;
-}
-
-export const test2: ITest2[] = [
+export const test2: ITest[] = [
 	{
-		ask: 'Dans quelle ville est née Jésus Сhrist ?',
+		ask: 'Dans quelle ville est née Jésus christ .',
 		image: image1,
-		variant1: 'Jérusalem',
-		variant2: 'Bethléem',
-		variant3: 'Israël',
-		variant4: 'Nazareth',
-		variant5: 'Jericho',
+		variants: [
+			{
+				label: 'Jerusalem',
+				isCorrect: false,
+			},
+			{
+				label: 'Bethléem',
+				isCorrect: true,
+			},
+			{
+				label: 'Israël',
+				isCorrect: false,
+			},
+			{
+				label: 'Nazareth',
+				isCorrect: false,
+			},
+			{
+				label: 'Jericho',
+				isCorrect: false,
+			},
+		],
 	},
 	{
-		ask: 'Combien y a-t-il de sourates dans le Coran ?',
+		ask: 'Combien y a t il de sourates dans le Coran ?',
 		image: image2,
-		variant1: '286',
-		variant2: '114',
-		variant3: '6236',
-		variant4: '40',
-		variant5: 'Cela dépend de la version du Coran.',
+		variants: [
+			{
+				label: '286',
+				isCorrect: false,
+			},
+			{
+				label: '114',
+				isCorrect: true,
+			},
+			{
+				label: '6236',
+				isCorrect: false,
+			},
+			{
+				label: '40',
+				isCorrect: false,
+			},
+			{
+				label: 'Cela dépend de la version du Coran.',
+				isCorrect: false,
+			},
+		],
 	},
 	{
-		ask: "L'eau purificatrice doit être fabriquée à partir des cendres de quel animal et quel était sa couleur ?",
+		ask: ' L’eau purificatrice doit être fabriquée à partir des cendres de quel animal et quel était sa couleur?',
 		image: image3,
-		variant1: 'Une vache rousse',
-		variant2: 'Un serpent brun',
-		variant3: 'Un agneau blanc',
-		variant4: 'Un mouton blanc',
-		variant5: 'Une colombe blanche',
+		variants: [
+			{
+				label: 'Une vache rousse',
+				isCorrect: true,
+			},
+			{
+				label: 'Un serpent brun',
+				isCorrect: false,
+			},
+			{
+				label: 'Un agneau blanc',
+				isCorrect: false,
+			},
+			{
+				label: 'Un mouton blanc',
+				isCorrect: false,
+			},
+			{
+				label: 'Une colombe blanche',
+				isCorrect: false,
+			},
+		],
 	},
 	{
-		ask: 'Que signifie " Bouddha ? "',
+		ask: 'Que signifie “Bouddha”',
 		image: image4,
-		variant1: 'Bienheureux',
-		variant2: 'Éveillé',
-		variant3: 'Sage',
-		variant4: 'Harmonieux',
-		variant5: 'Le messager',
+		variants: [
+			{
+				label: 'Bienheureux',
+				isCorrect: false,
+			},
+			{
+				label: 'Éveillé',
+				isCorrect: true,
+			},
+			{
+				label: 'Sage',
+				isCorrect: false,
+			},
+			{
+				label: 'Harmonieux',
+				isCorrect: false,
+			},
+			{
+				label: 'Le messager',
+				isCorrect: false,
+			},
+		],
 	},
 	{
-		ask: `" avant que le coq chante, tu m'auras renié… "`,
+		ask: `“avant que le coq chante, tu m’auras renié…”`,
 		image: image5,
-		variant1: 'Deux fois',
-		variant2: 'Devant dieu',
-		variant3: 'Trois fois',
-		variant4: 'Juda',
-		variant5: 'Cinq fois',
+		variants: [
+			{
+				label: 'Deux fois',
+				isCorrect: false,
+			},
+			{
+				label: 'Devant dieu',
+				isCorrect: false,
+			},
+			{
+				label: 'Trois fois',
+				isCorrect: true,
+			},
+			{
+				label: 'Juda',
+				isCorrect: false,
+			},
+			{
+				label: 'Cinq fois',
+				isCorrect: false,
+			},
+		],
 	},
 	{
 		ask: 'A quel mois a lieu la fête de Roch Hachana?',
 		image: image6,
-		variant1: 'en octobre',
-		variant2: 'en novembre',
-		variant3: 'cela dépend de la Lune',
-		variant4: 'fin septembre',
-		variant5: 'En janvier',
+		variants: [
+			{
+				label: 'en octobre',
+				isCorrect: true,
+			},
+			{
+				label: 'en novembre',
+				isCorrect: false,
+			},
+			{
+				label: 'cela dépend de la Lune',
+				isCorrect: false,
+			},
+			{
+				label: 'fin septembre',
+				isCorrect: false,
+			},
+			{
+				label: 'En janvier',
+				isCorrect: false,
+			},
+		],
 	},
 	{
-		ask: 'Où se situe la plus grande église orthodoxe du Monde ?',
+		ask: 'Où se situe la plus grande église orthodoxe du Monde?',
 		image: image7,
-		variant1: 'A Moscou',
-		variant2: 'A Yerevan',
-		variant3: 'A Sofia',
-		variant4: 'A Saint Petersbourg',
-		variant5: 'à Bucarest',
+		variants: [
+			{
+				label: 'A Moscou',
+				isCorrect: false,
+			},
+			{
+				label: 'A Yerevan',
+				isCorrect: false,
+			},
+			{
+				label: 'A Sofia',
+				isCorrect: false,
+			},
+			{
+				label: 'A Saint Petersbourg',
+				isCorrect: false,
+			},
+			{
+				label: 'à Bucarest',
+				isCorrect: true,
+			},
+		],
 	},
 	{
 		ask: 'Combien y a t il de sacrements dans la religion catholique ?',
+		variants: [
+			{
+				label: '3',
+				isCorrect: false,
+			},
+			{
+				label: '7',
+				isCorrect: true,
+			},
+			{
+				label: '8',
+				isCorrect: false,
+			},
+			{
+				label: '11',
+				isCorrect: false,
+			},
+			{
+				label:
+					"Il n'y en a pas . Le nom sacrement a été changé par le Pape Jean Paul 2 .",
+				isCorrect: false,
+			},
+		],
 		image: image8,
-		variant1: '3',
-		variant2: '7',
-		variant3: '8',
-		variant4: '11',
-		variant5: `Il n'y en a pas . Le nom sacrement a été changé par le Pape Jean Paul 2 .`,
 	},
 	{
-		ask: "Quelle est l'année islamique selon le calendrier musulman ?",
+		ask: 'Quelle est l&#39;année islamique selon le calendrier musulman ?',
 		image: image9,
-		variant1: '2023',
-		variant2: '1447',
-		variant3: '1673',
-		variant4: '1445',
-		variant5: '5784',
+		variants: [
+			{
+				label: '2023',
+				isCorrect: false,
+			},
+			{
+				label: '1447',
+				isCorrect: false,
+			},
+			{
+				label: '1673',
+				isCorrect: false,
+			},
+			{
+				label: '1445',
+				isCorrect: true,
+			},
+			{
+				label: '5784',
+				isCorrect: false,
+			},
+		],
 	},
 	{
 		ask: 'Où est apparue la religion bouddhiste ?',
 		image: image10,
-		variant1: `Dans le sud de l'Inde`,
-		variant2: 'Au Tibet',
-		variant3: `Dans le nord de l'Inde`,
-		variant4: 'En Chine',
-		variant5: 'En Indonésie',
+		variants: [
+			{
+				label: 'dans le sud de l&#39; Inde',
+				isCorrect: false,
+			},
+			{
+				label: 'Au Tibet',
+				isCorrect: true,
+			},
+			{
+				label: 'Dans le nord de l&#39; Inde',
+				isCorrect: false,
+			},
+			{
+				label: 'En Chine',
+				isCorrect: false,
+			},
+			{
+				label: 'En Indonésie',
+				isCorrect: false,
+			},
+		],
 	},
 ];

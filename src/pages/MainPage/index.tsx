@@ -39,7 +39,6 @@ const MainPage = () => {
 			<LabsVariable
 				id={1}
 				img={labs1}
-				title='title'
 				text={
 					<>
 						<p>
@@ -72,8 +71,8 @@ const MainPage = () => {
 							sera déterminante pour votre avenir.
 						</p>
 						<p>
-							Si besoin est, vous devrez passer par la case conversion
-							totalement prise en charge par nos services.'
+							Si besoin, vous devrez passer par la case conversion totalement
+							prise en charge par nos services.'
 						</p>
 					</>
 				}
@@ -89,18 +88,13 @@ const MainPage = () => {
 			<LabsVariable
 				id={5}
 				img={labs5}
-				title='title'
 				text={
 					<>
 						<p>
-							Reproduisez le mouvement que vous voyez , image par image tout en
-							répétant les phrases de survie dans toutes les langues que vous
-							connaissez ou parvenez à lire ( on met en plusieurs langues
-							peut-être là)?
-						</p>
-						<p>
-							Appliquez vous, leur réalisation doit être parfaite . Le cas
-							échéant, l'étape survie ne sera pas validée.
+							Reproduisez le mouvement que vous voyez image par image tout en
+							répétant les phrases de survie écrites en dessous. Appliquez vous
+							: leur réalisation doit être parfaite. Le cas échéant l’étape «
+							survie » ne sera pas validée pour certaines ZRP.
 						</p>
 					</>
 				}
@@ -118,9 +112,9 @@ const MainPage = () => {
 						<p>
 							Selon le choix que vous ferez de suivre ou non votre partenaire en
 							zone ZRP, il vous sera demandé de rendre une partie ou la totalité
-							de vos biens à l’État de Droit Autochtone et si nécessaire un
-							divorce express peut être mis en place par nos agents pour des
-							raisons de non partage de patrimoine
+							de vos biens à l’État de Droit de France Autochtone et si
+							nécessaire un divorce express peut être mis en place par nos
+							agents.
 						</p>
 					</>
 				}

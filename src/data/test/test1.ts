@@ -10,7 +10,7 @@ import testImg8 from '@/images/test/8.png';
 import testImg9 from '@/images/test/9.png';
 
 export interface ITest {
-	title: string;
+	title?: string;
 	image?: string;
 	ask: string;
 	variants: {

@@ -22,7 +22,7 @@ export const ninjaPhotos: IPhotos[] = [
 	{
 		text1: 'faites comme ça',
 		text2: 'dites-le',
-		text3: "avez-vous où je peux trouver du réseau et de l'eau potable?",
+		text3: "savez-vous où je peux trouver du réseau et de l'eau potable?",
 		photo: photo2,
 	},
 	{
@@ -42,7 +42,7 @@ export const ninjaPhotos: IPhotos[] = [
 		text1: 'faites comme ça',
 		text2: 'dites-le',
 		text3:
-			'je ressens quelque chose. Je ne suis pas un AA, je suis un humain identifié avec des sentiments ',
+			'je ressens quelque chose. Je ne suis pas un IA, je suis un humain identifié avec des sentiments ',
 		photo: photo5,
 	},
 ];
