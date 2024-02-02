@@ -57,7 +57,7 @@ const MainPage = () => {
 				id={2}
 				img={labs2}
 				title='choisissez la bonne réponse'
-				text="Afin d'évaluer votre niveau de connaissance de la langue française ainsi que votre culture générale globale, nous vous demandons de bien vouloir effectuer ce test sans l'aide d'une tierce personne"
+				text="Afin d'évaluer votre niveau de connaissance de la langue française ainsi que votre culture générale globale, nous vous demandons de bien vouloir effectuer ce test sans l'aide d'une tierce personne."
 				buttonLink='/test/0'
 				buttonText='Commencer le test'
 			/>
@@ -72,7 +72,7 @@ const MainPage = () => {
 						</p>
 						<p>
 							Si besoin, vous devrez passer par la case conversion totalement
-							prise en charge par nos services.'
+							prise en charge par nos services.
 						</p>
 					</>
 				}
@@ -92,8 +92,8 @@ const MainPage = () => {
 					<>
 						<p>
 							Reproduisez le mouvement que vous voyez image par image tout en
-							répétant les phrases de survie écrites en dessous. Appliquez vous
-							: leur réalisation doit être parfaite. Le cas échéant l’étape «
+							répétant les phrases de survie écrites en dessous. Appliquez vous:
+							leur réalisation doit être parfaite. Le cas échéant l’étape «
 							survie » ne sera pas validée pour certaines ZRP.
 						</p>
 					</>
@@ -106,7 +106,7 @@ const MainPage = () => {
 				text={
 					<>
 						<p>
-							Évaluez avec nous , pas à pas votre patrimoine personnel ainsi que
+							Évaluez avec nous, pas à pas votre patrimoine personnel ainsi que
 							celui de votre conjoint.
 						</p>
 						<p>

@@ -12,7 +12,7 @@ import type { ITest } from './test1';
 
 export const test2: ITest[] = [
 	{
-		ask: 'Dans quelle ville est née Jésus christ .',
+		ask: 'Dans quelle ville est née Jésus christ.',
 		image: image1,
 		variants: [
 			{
@@ -38,7 +38,7 @@ export const test2: ITest[] = [
 		],
 	},
 	{
-		ask: 'Combien y a t il de sourates dans le Coran ?',
+		ask: 'Combien y a t il de sourates dans le Coran?',
 		image: image2,
 		variants: [
 			{
@@ -194,7 +194,7 @@ export const test2: ITest[] = [
 		],
 	},
 	{
-		ask: 'Combien y a t il de sacrements dans la religion catholique ?',
+		ask: 'Combien y a t il de sacrements dans la religion catholique?',
 		variants: [
 			{
 				label: '3',
@@ -214,14 +214,14 @@ export const test2: ITest[] = [
 			},
 			{
 				label:
-					"Il n'y en a pas . Le nom sacrement a été changé par le Pape Jean Paul 2 .",
+					"Il n'y en a pas . Le nom sacrement a été changé par le Pape Jean Paul 2.",
 				isCorrect: false,
 			},
 		],
 		image: image8,
 	},
 	{
-		ask: 'Quelle est l&#39;année islamique selon le calendrier musulman ?',
+		ask: 'Quelle est l&#39;année islamique selon le calendrier musulman?',
 		image: image9,
 		variants: [
 			{
@@ -247,7 +247,7 @@ export const test2: ITest[] = [
 		],
 	},
 	{
-		ask: 'Où est apparue la religion bouddhiste ?',
+		ask: 'Où est apparue la religion bouddhiste?',
 		image: image10,
 		variants: [
 			{

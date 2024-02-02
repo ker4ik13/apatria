@@ -89,7 +89,7 @@ const DnaPage = () => {
 					</div>
 				</div>
 				<p className={styles.screenshot}>
-					Prenez une capture d'écran ! Présenter à la demande!
+					Prenez une capture d'écran! Présenter à la demande!
 				</p>
 			</div>
 		);
@@ -117,7 +117,7 @@ const DnaPage = () => {
 					</div>
 				</div>
 				<p className={styles.screenshot}>
-					Prenez une capture d'écran ! Présenter à la demande!
+					Prenez une capture d'écran! Présenter à la demande!
 				</p>
 			</div>
 		);

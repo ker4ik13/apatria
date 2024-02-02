@@ -16,33 +16,33 @@ export const ninjaPhotos: IPhotos[] = [
 		text1: 'faites comme ça',
 		text2: 'dites-le',
 		text3:
-			"je n'ai plus de batterie . pouvez-vous partager votre connexion internet avec moi?",
+			"Je n'ai plus de batterie. Pouvez-vous partager votre connexion internet avec moi?",
 		photo: photo1,
 	},
 	{
 		text1: 'faites comme ça',
 		text2: 'dites-le',
-		text3: "savez-vous où je peux trouver du réseau et de l'eau potable?",
+		text3: "Savez-vous où je peux trouver du réseau et de l'eau potable?",
 		photo: photo2,
 	},
 	{
 		text1: 'faites comme ça',
 		text2: 'dites-le',
 		text3:
-			"je suis en hypoglycémie : j'ai besoin de manger mais je suis allergique au gluten , au soja, au lactose et je suis intolérant aux produits non végétaux d'origine européenne ou aux aliments iodés. je dois avaler quelque chose dans les 10 minutes .",
+			"Je suis en hypoglycémie: j'ai besoin de manger mais je suis allergique au gluten, au soja, au lactose et je suis intolérant aux produits non végétaux d'origine européenne ou aux aliments iodés. Je dois avaler quelque chose dans les 10 minutes.",
 		photo: photo3,
 	},
 	{
 		text1: 'faites comme ça',
 		text2: 'dites-le',
-		text3: 'veni vidi vici wifi',
+		text3: 'Veni vidi vici wifi.',
 		photo: photo4,
 	},
 	{
 		text1: 'faites comme ça',
 		text2: 'dites-le',
 		text3:
-			'je ressens quelque chose. Je ne suis pas un IA, je suis un humain identifié avec des sentiments ',
+			'Je ressens quelque chose. Je ne suis pas un IA, je suis un humain identifié avec des sentiments.',
 		photo: photo5,
 	},
 ];

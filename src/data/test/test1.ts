@@ -23,7 +23,7 @@ export const test1: ITest[] = [
 	{
 		ask: 'Question Civilisation',
 		image: testImg5,
-		title: "Qu'est-ce que c'est ?",
+		title: "Qu'est-ce que c'est?",
 		variants: [
 			{
 				label: 'Un croissant au beurre',
@@ -46,7 +46,7 @@ export const test1: ITest[] = [
 	{
 		ask: 'Question Patrimoine',
 		image: testImg7,
-		title: "Qu'est-ce que c'est ?",
+		title: "Qu'est-ce que c'est?",
 		variants: [
 			{
 				label: 'La lettre A de l’alphabet latin avant 2031',
@@ -69,7 +69,7 @@ export const test1: ITest[] = [
 	{
 		ask: 'Question Sciences de la Vie et de la Terre',
 		image: testImg9,
-		title: "Qu'est-ce que c'est ?",
+		title: "Qu'est-ce que c'est?",
 		variants: [
 			{
 				label: 'Un crapaud',
@@ -92,7 +92,7 @@ export const test1: ITest[] = [
 	{
 		ask: 'Question Histoire de l’Art',
 		image: testImg4,
-		title: "Qu'est-ce que c'est ?",
+		title: "Qu'est-ce que c'est?",
 		variants: [
 			{
 				label: 'La schtroumpfette',
@@ -115,7 +115,7 @@ export const test1: ITest[] = [
 	{
 		ask: 'Question Géographie appliquée',
 		image: testImg1,
-		title: "Qu'est-ce que c'est ?",
+		title: "Qu'est-ce que c'est?",
 		variants: [
 			{
 				label: 'Beaujolais nouveau année 2036',
@@ -138,7 +138,7 @@ export const test1: ITest[] = [
 	{
 		ask: 'Question Mode et parfum',
 		image: testImg2,
-		title: "Qu'est-ce que c'est ?",
+		title: "Qu'est-ce que c'est?",
 		variants: [
 			{
 				label: 'Shanel numéro 5',
@@ -161,7 +161,7 @@ export const test1: ITest[] = [
 	{
 		ask: 'Question Littérature',
 		image: testImg3,
-		title: "Qu'est-ce que c'est ?",
+		title: "Qu'est-ce que c'est?",
 		variants: [
 			{
 				label: 'Le voleur à plume',
@@ -184,7 +184,7 @@ export const test1: ITest[] = [
 	{
 		ask: 'Question Architecture',
 		image: testImg8,
-		title: "Qu'est-ce que c'est ?",
+		title: "Qu'est-ce que c'est?",
 		variants: [
 			{
 				label: 'La porte Saint Martin',
@@ -207,7 +207,7 @@ export const test1: ITest[] = [
 	{
 		ask: 'Question Mythologie française',
 		image: testImg10,
-		title: "Qu'est-ce que c'est ?",
+		title: "Qu'est-ce que c'est?",
 		variants: [
 			{
 				label: 'Général Bonaparte',
@@ -230,7 +230,7 @@ export const test1: ITest[] = [
 	{
 		ask: 'Question Gastronomie',
 		image: testImg6,
-		title: "Qu'est-ce que c'est ?",
+		title: "Qu'est-ce que c'est?",
 		variants: [
 			{
 				label: 'Escargot',
