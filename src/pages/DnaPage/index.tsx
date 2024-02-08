@@ -8,7 +8,6 @@ const mockNation: string[] = [
 	'Juif',
 	'Ethiopien',
 	'Tatar',
-	'Français',
 	'Abkhazes',
 	'de Roms',
 	'Grec',
@@ -25,8 +24,8 @@ const mockNation: string[] = [
 	'Yakut',
 	'Albanais',
 	'Daghestan',
-	'Français',
 	'Américain',
+	'Français',
 	'Africain',
 	'Tadjik',
 	'Irlandais',
@@ -36,7 +35,6 @@ const mockNation: string[] = [
 	'Colombien',
 	'Équatorien',
 	'Chinois',
-	'Français',
 ];
 
 ChartJS.register(ArcElement, Tooltip, Legend);
