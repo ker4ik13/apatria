@@ -1,13 +1,14 @@
 import { generateArrays } from '@/features/generateRandomPercentage';
 import Close from '@/shared/ui/Close/Close';
-import { Chart } from 'chart.js/auto';
-import { useEffect, useRef } from 'react';
+import { ArcElement, Chart as ChartJS, Legend, Tooltip } from 'chart.js';
+import { Pie } from 'react-chartjs-2';
 import styles from './DnaPage.module.scss';
 
 const mockNation: string[] = [
 	'Juif',
 	'Ethiopien',
 	'Tatar',
+	'Français',
 	'Abkhazes',
 	'de Roms',
 	'Grec',
@@ -24,6 +25,7 @@ const mockNation: string[] = [
 	'Yakut',
 	'Albanais',
 	'Daghestan',
+	'Français',
 	'Américain',
 	'Africain',
 	'Tadjik',
@@ -34,20 +36,22 @@ const mockNation: string[] = [
 	'Colombien',
 	'Équatorien',
 	'Chinois',
+	'Français',
 ];
-const [valuesArray, percentagesArray] = generateArrays(mockNation);
+
+ChartJS.register(ArcElement, Tooltip, Legend);
 
 const DnaPage = () => {
-	const diagram = useRef<HTMLCanvasElement>(null);
+	const fake = Math.floor(Math.random() * 51);
+	console.log(fake);
 
-	const fake = Math.floor(Math.random() * 11);
-	// const fake = 10;
+	const isFake = () => fake >= 50;
 
+	const [valuesArray, percentagesArray] = generateArrays(mockNation);
 	const data = {
-		labels:
-			fake >= 10
-				? ['origine inconnue', 'origine inconnue', 'origine inconnue']
-				: valuesArray,
+		labels: isFake()
+			? ['origine inconnue', 'origine inconnue', 'origine inconnue']
+			: valuesArray,
 		datasets: [
 			{
 				label: '%',
@@ -58,16 +62,7 @@ const DnaPage = () => {
 		],
 	};
 
-	useEffect(() => {
-		if (diagram.current) {
-			new Chart(diagram.current, {
-				data: data,
-				type: 'pie',
-			});
-		}
-	}, [diagram.current]);
-
-	if (fake >= 10) {
+	if (isFake()) {
 		return (
 			<div className={styles.dnaPage}>
 				<div className={styles.header}>
@@ -75,10 +70,10 @@ const DnaPage = () => {
 				</div>
 				<div className={styles.content}>
 					<div className={styles.diagram}>
-						{fake >= 10 ? (
+						{isFake() ? (
 							<div className={styles.error}>?</div>
 						) : (
-							<canvas ref={diagram}></canvas>
+							<Pie data={data} />
 						)}
 					</div>
 					<div className={styles.results}>
@@ -101,7 +96,7 @@ const DnaPage = () => {
 				</div>
 				<div className={styles.content}>
 					<div className={styles.diagram}>
-						<canvas ref={diagram}></canvas>
+						<Pie data={data} />
 					</div>
 					<div className={styles.results}>
 						<h2 className={styles.title}>Votre ADN:</h2>

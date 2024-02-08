@@ -1,11 +1,14 @@
 import { Suspense, lazy } from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
+
 // Pages
 import { test1 } from '@/data/test/test1';
 import { test2 } from '@/data/test/test2';
 import MainPage from '@/pages/MainPage';
 import PredResultPage from '@/pages/PredResultPage';
 import Preloader from '@/shared/ui/Preloader';
+import FingerTest from '@/widgets/Labs1Test';
+
 // Lazy
 const DocsPage = lazy(() => import('@/pages/DocsPage'));
 const DnaPage = lazy(() => import('@/pages/DnaPage'));
@@ -24,6 +27,14 @@ export const RouterProvider = () => {
 					element={
 						<Suspense fallback={<Preloader />}>
 							<DocsPage />
+						</Suspense>
+					}
+				/>
+				<Route
+					path='/first-screen'
+					element={
+						<Suspense fallback={<Preloader />}>
+							<FingerTest />
 						</Suspense>
 					}
 				/>
